@@ -6,7 +6,7 @@ function Home(props) {
 
   useEffect(() => {
     const testApi = async () => {
-      const data = await exampleApi.example();
+      const data = await exampleApi.example2();
       setState(data);
     };
     testApi();

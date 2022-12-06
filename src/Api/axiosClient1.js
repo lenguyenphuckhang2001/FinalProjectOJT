@@ -1,26 +1,20 @@
 import axios from 'axios';
-import queryString from 'query-string';
 
-//test API: https://api.publicapis.org/entries
 const BASE_URL = 'https://api.publicapis.org';
 
-//set ip default config http requests
-const axiosClient = axios.create({
+const axiosClient1 = axios.create({
   baseURL: BASE_URL,
   headers: {
     'content-type': 'application/json',
   },
   paramsSerializer: {},
-  // (params) => queryString.stringify(params),
 });
 
-//handle token here
-axiosClient.interceptors.request.use((config) => {
+axiosClient1.interceptors.request.use((config) => {
   return config;
 });
 
-//handle data
-axiosClient.interceptors.response.use(
+axiosClient1.interceptors.response.use(
   (response) => {
     if (response && response.data) {
       return response.data;
@@ -32,4 +26,4 @@ axiosClient.interceptors.response.use(
     throw error;
   },
 );
-export default axiosClient;
+export default axiosClient1;
