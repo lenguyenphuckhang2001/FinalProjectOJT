@@ -13,7 +13,7 @@ function Home(props) {
   }, []);
 
   console.log(state);
-  return <div>HOME page</div>;
+  return <div></div>;
 }
 
 export default Home;
