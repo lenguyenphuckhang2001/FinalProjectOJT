@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://api.publicapis.org';
+const BASE_URL = 'https://638acf1a7220b45d2282cd8c.mockapi.io';
 
-const axiosClient1 = axios.create({
+const axiosClient2 = axios.create({
   baseURL: BASE_URL,
   headers: {
     'content-type': 'application/json',
@@ -10,11 +10,11 @@ const axiosClient1 = axios.create({
   paramsSerializer: {},
 });
 
-axiosClient1.interceptors.request.use((config) => {
+axiosClient2.interceptors.request.use((config) => {
   return config;
 });
 
-axiosClient1.interceptors.response.use(
+axiosClient2.interceptors.response.use(
   (response) => {
     if (response && response.data) {
       return response.data;
@@ -26,4 +26,4 @@ axiosClient1.interceptors.response.use(
     throw error;
   },
 );
-export default axiosClient1;
+export default axiosClient2;

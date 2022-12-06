@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import exampleApi from '../../Api/exampleApi';
-
+import TeamApi from '../../Api/TeamAPI';
 function Home(props) {
   const [state, setState] = useState();
 
   useEffect(() => {
-    const testApi = async () => {
-      const data = await exampleApi.example2();
-      setState(data);
-    };
-    testApi();
+    TeamApi.getTeam()
+      .then((result) => {
+        console.log(result);
+        setState(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
-  console.log(state);
-  return <div></div>;
+  return (
+    <div>
+      {/* {state &&
+        state.map((item) => {
+          return <p>{item.name}</p>;
+        })} */}
+    </div>
+  );
 }
 
 export default Home;
