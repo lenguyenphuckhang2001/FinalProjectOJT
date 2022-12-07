@@ -1,15 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import './Header.scss';
+import { Collapse } from 'react-bootstrap';
 
 function Header() {
+  const [display, setDisplay] = useState(false);
+  const [expand, setExpand] = useState(false);
+  const [openSubmenuMobi, setMobi] = useState(false);
+
+  const handleOnClick = () => {
+    setTimeout(() => {
+      setDisplay(!display);
+    }, 50);
+  };
+  const changeIcon = () => {
+    setTimeout(() => {
+      setExpand(!expand);
+    }, 100);
+  };
+
   return (
     <header>
       <div className='container'>
-        <nav className='heer-content'>
+        <nav className='header-content'>
           <div className='header-logo'>
-            <a href='/'>
-              <img src='https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png' />
-            </a>
+            <Link to='/'>
+              <img
+                className='img-fluid'
+                src='https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png'
+              />
+            </Link>
           </div>
           <div className='header-nav'>
             <ul id='mainNav'>
@@ -18,6 +39,17 @@ function Header() {
               </li>
               <li>
                 <Link to='/st-software/'>What We Do</Link>
+                <ul className='sub-menu'>
+                  <li>
+                    <Link to='/st-software/'>ST SOFTWARE</Link>
+                  </li>
+                  <li>
+                    <Link to='/st-digital/'>ST DIGITAL</Link>
+                  </li>
+                  <li>
+                    <Link to='/st-incubation/'>ST INCUBATION</Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link to='/who-we-are/'>Who We Are</Link>
@@ -25,9 +57,95 @@ function Header() {
               <li>
                 <Link to='/portfolio/'>Portfolio</Link>
               </li>
-              <li>Join Us</li>
-              <li>Let's Talk</li>
+              <li>
+                <Link to='/join-us'>Join Us</Link>
+              </li>
+              <li>
+                <Link to='/lets-talk/'>Let's Talk</Link>
+              </li>
             </ul>
+          </div>
+        </nav>
+      </div>
+      <div className='container-fluid'>
+        <nav className='header-mobi-content'>
+          <div className='header-mobi-nav'>
+            <div className='mobi-nav-button'>
+              <i
+                onClick={() => {
+                  handleOnClick();
+                }}
+                class='fa-solid fa-bars'
+              ></i>
+            </div>
+
+            {display && (
+              <div className='mobi-nav-content'>
+                <li>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li
+                  onClick={() => {
+                    changeIcon();
+                  }}
+                  style={{ position: 'relative', overflow: 'hidden' }}
+                >
+                  <Link
+                    className={!expand ? '' : 'background-blue text-white '}
+                    onClick={() => {
+                      setMobi(!openSubmenuMobi);
+                    }}
+                    to='/st-software/'
+                  >
+                    What We Do
+                  </Link>
+                  <Collapse
+                    in={openSubmenuMobi}
+                    className={!openSubmenuMobi ? '' : 'background-light-blue '}
+                  >
+                    <div>
+                      <li>
+                        <Link className='text-white' to='/st-software/'>
+                          ST SOFTWARE
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className='text-white' to='/st-digital/'>
+                          ST DIGITAL
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className='text-white' to='/st-incubation/'>
+                          ST INCUBATION
+                        </Link>
+                      </li>
+                    </div>
+                  </Collapse>
+                  <span className={!expand ? 'expand-btn' : 'expand-btn-open'}></span>
+                </li>
+                <li>
+                  <Link to='/who-we-are/'>Who We Are</Link>
+                </li>
+                <li>
+                  <Link to='/portfolio/'>Portfolio</Link>
+                </li>
+                <li>
+                  <Link to='/join-us'>Join Us</Link>
+                </li>
+                <li>
+                  <Link to='/lets-talk/'>Let's Talk</Link>
+                </li>
+              </div>
+            )}
+          </div>
+
+          <div className='header-mobi-logo'>
+            <Link to='/'>
+              <img
+                className='img-fluid'
+                src='https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png'
+              />
+            </Link>
           </div>
         </nav>
       </div>
