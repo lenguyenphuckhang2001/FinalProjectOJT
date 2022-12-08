@@ -1,26 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import TeamApi from '../../Api/TeamAPI';
-function Home(props) {
-  const [state, setState] = useState();
+import Banner from './Banner/Banner';
+import HomeStories from './HomeStories/HomeStories';
+import About from './About/About';
+import Carousel from './Carousel/Carousel';
+import './Home.scss';
 
-  useEffect(() => {
-    TeamApi.getTeam()
-      .then((result) => {
-        console.log(result);
-        setState(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
+function Home() {
   return (
-    <div>
-      {/* {state &&
-        state.map((item) => {
-          return <p>{item.name}</p>;
-        })} */}
-    </div>
+    <>
+      <Banner />
+      <HomeStories />
+      <About />
+      <Carousel />
+    </>
   );
 }
 

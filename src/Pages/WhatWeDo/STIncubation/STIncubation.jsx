@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Col, Row } from 'react-bootstrap';
-import BannerImage from '../../../components/BannerImage/BannerImage';
-import InfoItem from '../../../components/InfoItem/InfoItem';
+import BannerImage from '../../../Components/BannerImage/BannerImage';
+import InfoItem from '../../../Components/InfoItem/InfoItem';
 import './STIncubation.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 

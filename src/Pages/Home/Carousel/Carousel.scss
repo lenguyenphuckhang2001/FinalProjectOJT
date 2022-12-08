@@ -1,0 +1,103 @@
+@import '../../../Common\ scss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.partner {
+  background: rgb(245, 245, 245);
+  padding-top: 35px;
+  padding-bottom: 40px;
+  .container {
+    .partner-inner {
+      padding: 55px 40px;
+      .partner-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        h2 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 24px;
+          line-height: 32px;
+          font-size: 500;
+        }
+        button {
+          font-size: 10px;
+          line-height: 10px;
+          font-weight: 400;
+          background: transparent;
+          border: 1px solid #00aeef;
+          padding: 4px 8px;
+          color: #00aeef;
+          vertical-align: middle;
+          text-align: center;
+          border-radius: 3px;
+          transition: 0.2s;
+          &:hover {
+            background: #00aeef;
+            color: white;
+            cursor: pointer;
+          }
+          &:nth-child(1) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .partner-bottom {
+      .mySwiper {
+        .swiper-pagination-bullet {
+          margin-top: 20px;
+          width: 10px;
+          height: 10px;
+        }
+        .swiper-pagination-bullet-active {
+          background: #959595;
+        }
+        .swiper-pagination {
+          position: relative;
+          bottom: 0px;
+        }
+        .partner-item {
+          padding: 35px 15px;
+          text-align: center;
+          background: white;
+          box-shadow: 0 0 3px rgb(0 0 0 / 15%);
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive('medium') {
+  .partner-top-button {
+    display: none;
+    visibility: hidden;
+  }
+  .partner {
+    .container {
+      .partner-inner {
+        padding: 55px 0;
+      }
+    }
+    .partner-inner {
+      .partner-top {
+        h2 {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@include responsive('small') {
+  .partner {
+    .partner-inner {
+      .partner-top {
+        h2 {
+          width: 75%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import '../../../Common\ scss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+.about {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  position: relative;
+  .about-bg {
+    background: url(https://stunited.vn/wp-content/uploads/2016/02/houzez-header-4.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    background-attachment: scroll;
+    position: absolute;
+    height: 150%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .about-content {
+    color: white;
+    padding-top: 35px;
+    padding-right: 15px;
+    padding-left: 15px;
+    .about-above {
+      padding: 55px 0 0 0;
+      text-align: center;
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+    }
+    .about-bottom {
+      padding: 40px 0 55px;
+      .container {
+        .row {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive('extra-large') {
+  .about {
+    .about-content {
+      .about-bottom {
+        .container {
+          .row {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive('medium') {
+  .about {
+    .about-content {
+      .about-above {
+        padding: 35px 50px 0 50px;
+      }
+      .about-bottom {
+        padding: 20px 0 55px;
+        .container {
+          .row {
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive('small') {
+  .about {
+    .about-content {
+      .about-bottom {
+        .container {
+          .row {
+            padding: 0 35px;
+          }
+        }
+      }
+    }
+  }
+}

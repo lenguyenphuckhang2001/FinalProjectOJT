@@ -40,6 +40,28 @@
         font-weight: 400;
         color: white;
         width: 100%;
+        a {
+          &:nth-child(1) {
+            margin-right: 6px;
+          }
+          transition: 0.3s;
+          &:hover {
+            color: #00aeff;
+            i {
+              color: #00aeff;
+            }
+          }
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 700;
+          color: white;
+          i {
+            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+          }
+        }
         p {
           margin-bottom: 8px;
         }
@@ -47,9 +69,6 @@
           font-size: 14px;
           line-height: 18px;
           margin-bottom: 12px;
-        }
-        i:nth-child(1) {
-          margin-right: 6px;
         }
       }
     }
@@ -120,6 +139,12 @@
     .card-swiper-overlay-2 {
       transform: translate3d(0, 0, 0);
     }
+  }
+}
+
+@include responsive('large') {
+  .card-swiper-inner {
+    padding: 0 10px;
   }
 }
 @include responsive('medium') {

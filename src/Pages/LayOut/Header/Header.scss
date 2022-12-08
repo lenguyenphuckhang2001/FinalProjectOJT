@@ -21,6 +21,7 @@ header {
   font-family: 'Roboto', sans-serif;
   background: transparent;
   position: absolute;
+  z-index: 999;
   width: 100%;
   border-bottom: 1px none;
   border-color: rgba(255, 255, 255, 0.3);
@@ -58,8 +59,7 @@ header {
         a {
           transition: 0.3s;
           display: inline-block;
-          color: black;
-          //color: white;
+          color: white;
           text-decoration: none;
           line-height: 90px;
           padding: 0 15px;

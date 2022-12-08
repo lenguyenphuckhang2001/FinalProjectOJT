@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
 @import '../../../Common\ scss/Responsive.scss';
 footer {
-  padding-top: 1000px;
   font-family: 'Roboto', sans-serif;
   li {
     list-style: none;
@@ -121,7 +120,7 @@ footer {
 }
 @include responsive('medium') {
   footer {
-    // padding: 45px 0 35px;
+    padding: 0;
     .footer-bottom {
       p {
         text-align: center;

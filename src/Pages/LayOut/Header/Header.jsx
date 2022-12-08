@@ -95,7 +95,6 @@ function Header() {
                     onClick={() => {
                       setMobi(!openSubmenuMobi);
                     }}
-                    to='/st-software/'
                   >
                     What We Do
                   </Link>
@@ -121,7 +120,12 @@ function Header() {
                       </li>
                     </div>
                   </Collapse>
-                  <span className={!expand ? 'expand-btn' : 'expand-btn-open'}></span>
+                  <span
+                    onClick={() => {
+                      setMobi(!openSubmenuMobi);
+                    }}
+                    className={!expand ? 'expand-btn' : 'expand-btn-open'}
+                  ></span>
                 </li>
                 <li>
                   <Link to='/who-we-are/'>Who We Are</Link>
