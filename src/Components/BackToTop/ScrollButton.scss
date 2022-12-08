@@ -1,0 +1,20 @@
+.fWohKN {
+  margin: 0;
+  right: 30px;
+  bottom: 30px;
+  font-size: 18px;
+  background: #00aeef;
+  border: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  z-index: 999;
+  transition: 0.2s;
+  &:hover {
+    background: rgba(0, 174, 239, 0.75);
+  }
+  i {
+    color: white;
+  }
+}

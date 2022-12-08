@@ -22,12 +22,6 @@ const Carousel = () => {
       });
   }, []);
 
-  const onButtonNextCLick = () => {
-    navigationNextRef.current.click();
-  };
-  const onButtonPrevCLick = () => {
-    navigationPrevRef.current.click();
-  };
   return (
     <>
       <section className='partner'>
@@ -36,23 +30,19 @@ const Carousel = () => {
             <div className='partner-top'>
               <h2>Trusted by the Clients & Partners</h2>
               <div className='partner-top-button'>
-                <button ref={navigationPrevRef} onClick={onButtonPrevCLick}>
-                  Prev
-                </button>
-                <button ref={navigationNextRef} onClick={onButtonNextCLick}>
-                  Next
-                </button>
+                <button ref={navigationPrevRef}>Prev</button>
+                <button ref={navigationNextRef}>Next</button>
               </div>
             </div>
             <div className='partner-bottom'>
               <Swiper
-                speed={2500}
+                speed={1000}
                 grabCursor={true}
                 pagination={{
                   clickable: true,
                 }}
                 autoplay={{
-                  delay: 3500,
+                  delay: 500,
                   stopOnLastSlide: true,
                 }}
                 navigation={{
