@@ -1,0 +1,61 @@
+@import '../../Common\ scss/Responsive.scss';
+.card-join {
+  background: white;
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  &:hover {
+    z-index: 100;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    transform: translate(0, -10px);
+  }
+  .card-join-container {
+    padding: 0 30px 30px;
+    text-align: center;
+
+    .card-join-img {
+      font-size: 60px;
+      min-width: 80px;
+      padding: 80px 0 70px;
+    }
+    .card-join-text {
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+        margin: 0 0 8px 0;
+      }
+      p {
+        line-height: 22px;
+        font-weight: 300;
+        margin: 0 0 10px 0;
+        color: #636363;
+      }
+      a {
+        text-decoration: none;
+        color: #00aeef;
+      }
+    }
+  }
+}
+
+@include responsive('medium') {
+  .card-join {
+    .card-join-container {
+      .card-join-img {
+        font-size: 38px;
+        padding: 38px 0;
+      }
+    }
+  }
+  .card-join {
+    .card-join-container {
+      .card-join-text {
+        a,
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

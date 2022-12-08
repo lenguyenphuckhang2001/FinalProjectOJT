@@ -1,5 +1,6 @@
 import Home from '../Pages/Home/Home';
-import JoinUs from '../Pages/JoinIUs/JoinUs';
+import JoinUs from '../Pages/JoinUs/JoinUs';
+
 import LetTalk from '../Pages/LetTalk/LetTalk';
 import Portfolio from '../Pages/Portfolio/Portfolio';
 import STDigital from '../Pages/WhatWeDo/STDigital/STDigital';

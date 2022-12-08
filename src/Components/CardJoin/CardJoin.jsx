@@ -1,17 +1,17 @@
 import React from 'react';
-import './CardHover.scss';
+import './CardJoin.scss';
 const CardHover = (props) => {
   return (
     <>
-      <div className='card-hover col-12 col-md-4'>
-        <div className='card-hover-container'>
-          <div className='card-hover-img'>
+      <div className='card-join col-12 col-lg-3 col-md-6 '>
+        <div className='card-join-container'>
+          <div className='card-join-img'>
             <img className='img-fluid' src={props.img} alt='' />
           </div>
-          <div className='card-hover-text'>
+          <div className='card-join-text'>
             <h3>{props.name}</h3>
             <p>{props.description}</p>
-            <a href='#'>See More</a>
+            <a href='#'>Interesting?</a>
           </div>
         </div>
       </div>
