@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import '../../Common\ scss/Responsive';
+
+.module-item-2 {
+  text-align: left;
+  box-shadow: none;
+  display: table;
+  padding-bottom: 120px;
+  font-family: 'Roboto';
+  margin: 0 10px;
+  max-width: 100%;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+
+  .block-icon-2 {
+    font-size: 35px;
+    padding-right: 28px;
+    display: table-cell;
+    vertical-align: top;
+    min-width: 70px;
+    line-height: 40px;
+
+    @media (max-width: 767px) {
+      min-width: 50px;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+      border: 0;
+    }
+    i {
+      color: #7a7a7a;
+      display: inline-block;
+      text-align: left;
+      font-size: inherit;
+    }
+  }
+  .block-content-2 {
+    h3 {
+      color: #7a7a7a;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      text-align: left;
+    }
+    p {
+      color: #636363;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: left;
+      font-size: 16px;
+      margin: 0 0 10px 0;
+
+      @include responsive('extra large') {
+        margin: -15px -15px;
+      }
+
+      @include responsive('medium') {
+        font-size: 12px;
+        line-height: 23px;
+      }
+    }
+    a {
+      text-decoration: none;
+      box-shadow: none;
+      line-height: 16px;
+      font-size: 400;
+      display: inline;
+      color: #00aeef;
+
+      @include responsive('medium') {
+        font-size: 12px;
+        line-height: 23px;
+      }
+    }
+  }
+}
