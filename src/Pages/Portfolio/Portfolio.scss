@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import '../../Common\ scss/Responsive.scss';
+.portfolio-container {
+  font-family: 'Roboto', sans-serif;
+
+  .title {
+    .title-content {
+      line-height: 32px;
+      margin: 55px 0 4px 0;
+      text-transform: inherit;
+      text-align: center;
+      font-family: 'Roboto';
+
+      h2 {
+        padding: 1px 0px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+    .content-portfolio {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 0 50px 0;
+        font-weight: 300;
+        text-transform: inherit;
+        text-align: center;
+        font-family: 'Roboto';
+      }
+    }
+  }
+}
+.portfolio-container {
+  .container {
+    .portfolio-item {
+      padding: 0 0%;
+    }
+  }
+}
+@include responsive('small') {
+  .titles {
+    .typical {
+      font: 24px 'Roboto', sans-serif;
+      padding-top: 0px;
+      text-align: center;
+    }
+  }
+  .main-content {
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+@include responsive('medium') {
+  .title-content {
+    .typical {
+      font: 24px 'Roboto', sans-serif;
+      padding-top: 0px;
+      font-weight: 500;
+    }
+  }
+  .main-content {
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
+
+@include responsive('large') {
+  .title-content {
+    .typical {
+      font: 24px 'Roboto', sans-serif;
+      padding-top: 0px;
+      font-weight: 500;
+      padding-bottom: 5px;
+    }
+  }
+  .main-content {
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
