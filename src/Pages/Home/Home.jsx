@@ -12,7 +12,6 @@ function Home() {
       <HomeStories />
       <About />
       <Carousel />
-
     </>
   );
 }

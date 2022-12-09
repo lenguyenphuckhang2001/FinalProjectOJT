@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
-import ErrorPage from '../Pages/error-page';
+import ErrorPage from '../Pages/Error/error-page';
 import LayOut from '../Pages/LayOut/LayOut';
 import publicRouters from './publicRouters.js';
 
