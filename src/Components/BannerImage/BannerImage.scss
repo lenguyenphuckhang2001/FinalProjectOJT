@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 .banner-imgage {
   height: 400px;
   position: relative;
@@ -19,6 +21,7 @@
     }
   }
   .banner-caption {
+    font-family: 'Roboto', sans-serif;
     background: transparent;
     position: absolute;
     color: #fff;

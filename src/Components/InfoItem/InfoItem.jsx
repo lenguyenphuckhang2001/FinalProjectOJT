@@ -2,18 +2,17 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import './InfoItem.scss';
 
-const InfoItem = ({ imgSrc, title, paragraph, icon }) => {
+const InfoItem = ({ imgSrc, title, paragraph }) => {
   return (
     <>
       <Col>
-        <div className='module-item'>
-          <div className='block-icon'>
-            {icon ? <i className={icon ? `${icon} icon` : ''} /> : <img src={imgSrc} alt='' />}
+        <div className='module-item-info'>
+          <div className='block-icon-info'>
+            <img src={imgSrc} alt='' />
           </div>
-          <div className='block-content'>
-            <h3 className={icon ? 'text-icon-h3' : ''}>{title}</h3>
-            <p className={icon ? 'text-icon-p' : ''}>{paragraph}</p>
-            {icon && <a href='#'>See More</a>}
+          <div className='block-content-info'>
+            <h3>{title}</h3>
+            <p>{paragraph}</p>
           </div>
         </div>
       </Col>

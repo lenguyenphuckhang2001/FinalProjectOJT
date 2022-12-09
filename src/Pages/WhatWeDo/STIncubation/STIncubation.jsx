@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Col, Row } from 'react-bootstrap';
+import IncubationApi from '../../../Api/IncubationAPI';
 import BannerImage from '../../../Components/BannerImage/BannerImage';
-
+import CardSwiper from '../../../Components/CardSwiper/CardSwiper';
 import InfoItem from '../../../Components/InfoItem/InfoItem';
 import './STIncubation.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,6 +45,16 @@ const data = [
 ];
 
 function STIncubation(props) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    //**using IIFE function
+    (async () => {
+      const response = await IncubationApi.getIncubation();
+      setData(response);
+    })();
+  }, []);
+
   return (
     <>
       <BannerImage
@@ -54,12 +65,12 @@ function STIncubation(props) {
         ]}
       />
       <div className='incubation-container'>
-        <div className='container-wrapper container'>
+        <div className='container-wrapper container py-sm-0 px-sm-3 p-md-0'>
           <div className='incuba-title'>
             <h1>ST INCUBATION</h1>
           </div>
           <section className='incuba-content'>
-            <div className='wpb_wrapper top'>
+            <div className='wpb_wrapper_text top'>
               <article>
                 <p>
                   After long time working in software development outsourcing industry, founders of{' '}
@@ -86,24 +97,20 @@ function STIncubation(props) {
           </section>
         </div>
       </div>
-      <div className='wpb_wrapper bottom'>
-        <div className='bottom-container'>
+      <div className='wpb_wrapper_bottom'>
+        <div className='bottom container py-sm-5 p-md-0'>
           <div className='wpb-bottom-title'>
             <h2>Our incubating projects</h2>
             <h3>We are supporting for these cool teams</h3>
           </div>
-          <div className='wpb-row'>
-            <div className='wpb-col'>
-              {/* {data &&
-                      data.map((item) => (
-                        <div className='col-wrapper'>
-                          <img src={item.img} alt='' />
-                        </div>
-                      ))} */}
-            </div>
+          <div className='row g-0 p-0'>
+            {data.map(({ name, tag, description, id, img }) => (
+              <CardSwiper key={id} name={name} img={img} tech={tag} description={description} />
+            ))}
           </div>
         </div>
       </div>
+      <div className='pad'></div>
     </>
   );
 }
