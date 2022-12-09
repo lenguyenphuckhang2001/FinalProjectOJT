@@ -235,6 +235,7 @@ header {
 
 @include responsive('large') {
   header {
+    position: relative;
     display: block;
     background: #00aeef;
     .container {
