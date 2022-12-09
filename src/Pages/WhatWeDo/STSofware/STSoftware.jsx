@@ -120,6 +120,7 @@ function STSoftware(props) {
           </div>
         </section>
       </div>
+      <div className='empty-space'></div>
     </div>
   );
 }
