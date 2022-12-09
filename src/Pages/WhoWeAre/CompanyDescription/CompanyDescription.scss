@@ -1,0 +1,100 @@
+@mixin devices($breakpoint) {
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+.company-description {
+  background-color: #f5f5f5;
+}
+.wpb_wrapper {
+  padding-bottom: 5%;
+  width: 100%;
+  &:first-of-type {
+    padding-top: 6%;
+  }
+  &:nth-of-type(2) {
+    h1 {
+      padding: 0;
+      padding-top: 5%;
+    }
+  }
+  &:last-of-type {
+    padding: 0;
+    padding-top: 1%;
+  }
+  font-family: Roboto;
+  p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-left: 11%;
+    padding-right: 10%;
+    @include devices(laptop) {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+  }
+  ul {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-left: 12%;
+    padding-right: 10%;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    padding-top: 10%;
+    padding-bottom: 3%;
+  }
+  strong {
+    font-weight: 900;
+  }
+  h4 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+}
+.wpb_row {
+  font-family: ‘Roboto’, sans-serif;
+  width: 78%;
+  margin-left: auto;
+  margin-right: auto;
+  .vc_column-inner {
+    p {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      padding-left: 0;
+      padding-right: 5%;
+      @include devices(laptop) {
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+    }
+    b {
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 0%;
+      padding-right: 10%;
+    }
+  }
+}
+.vc_sep_line {
+  height: 1px;
+  border-top: 1px solid #ebebeb;
+  display: block;
+  top: 1px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
