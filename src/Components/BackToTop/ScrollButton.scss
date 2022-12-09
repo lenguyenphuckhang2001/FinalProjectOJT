@@ -1,20 +1,20 @@
 .fWohKN {
-  margin: 0;
-  right: 30px;
-  bottom: 30px;
-  font-size: 18px;
-  background: #00aeef;
-  border: none;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 4px;
-  z-index: 999;
-  transition: 0.2s;
+  margin: 0 !important;
+  right: 30px !important;
+  bottom: 30px !important;
+  font-size: 18px !important;
+  background: #00aeef !important;
+  border: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  border-radius: 4px !important;
+  z-index: 999 !important;
+  transition: 0.2s !important;
   &:hover {
-    background: rgba(0, 174, 239, 0.75);
+    background: rgba(0, 174, 239, 0.75) !important;
   }
   i {
-    color: white;
+    color: white !important;
   }
 }
