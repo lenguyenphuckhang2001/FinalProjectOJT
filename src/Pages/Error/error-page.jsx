@@ -2,13 +2,18 @@ import { useRouteError } from 'react-router-dom';
 import Header from '../LayOut/Header/Header';
 import Footer from '../LayOut/Footer/Footer';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './error-page.scss';
+
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
 
   return (
     <div id='error-page'>
+      <Helmet>
+        <title>Pages not Found - ST United</title>
+      </Helmet>
       <Header />
       <div className='error-page-content'>
         <h1>Oh oh! Page not found.</h1>
