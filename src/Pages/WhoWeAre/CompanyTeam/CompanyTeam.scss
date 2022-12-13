@@ -18,38 +18,26 @@
 
 .table-member {
   padding: 0 125px;
+  padding-bottom: 55px;
 }
 
 @include responsive('extra-large') {
   .table-member {
     padding: 0 50px;
+    padding-bottom: 55px;
   }
 }
 
 @include responsive('large') {
   .table-member {
     padding: 0 10px;
+    padding-bottom: 55px;
   }
 }
 
 @include responsive('medium') {
   .table-member {
     padding: 0 20px;
+    padding-bottom: 55px;
   }
 }
-
-// @media screen and (max-width: 285px) {
-//   .table-member {
-//     padding: 0 10px;
-//   }
-//   .card-team {
-//     .card-team-container {
-//       .card-team-img {
-//         > .img-fluid {
-//           width: 60px;
-//           height: 60px;
-//         }
-//       }
-//     }
-//   }
-// }

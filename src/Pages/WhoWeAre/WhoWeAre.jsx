@@ -1,6 +1,7 @@
 import React from 'react';
 import BannerImage from '../../Components/BannerImage/BannerImage';
-import ButtonTeam from '../../Components/ButtonTeam/ButtonTeam';
+
+
 import CompanyDescription from './CompanyDescription/CompanyDescription';
 import CompanyTeam from './CompanyTeam/CompanyTeam';
 
@@ -16,7 +17,7 @@ function WhoWeAre(props) {
       />
       <CompanyDescription />
       <CompanyTeam />
-      <ButtonTeam />
+     
     </div>
   );
 }

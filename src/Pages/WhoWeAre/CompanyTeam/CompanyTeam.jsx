@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import teamApi from '../../../Api/TeamAPI';
 import CardTeam from '../../../Components/CardTeam/CardTeam';
 import './CompanyTeam.scss';
-import TeamApi from '../../../Api/TeamAPI';
+import Button from '../../../Components/Button/Button';
 
 const CompanyTeam = () => {
   const [team, setTeam] = useState([]);
@@ -33,6 +33,7 @@ const CompanyTeam = () => {
       <div className='T-body'>
         <div className='row md-12'></div>
       </div>
+      <Button link={'http://dev.stunited.vn/careers/'} description={'Wanna join us?'} />
     </div>
   );
 };

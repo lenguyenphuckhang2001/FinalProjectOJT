@@ -1,17 +1,13 @@
 import React from 'react';
 import './Button.scss';
 
-const Button = () => {
+const Button = ({ link, description }) => {
   return (
-    <div>
-      <div className='container'>
-        <div className='button'>
-          <button className='button-portfilio'>
-            <a href='https://storage.googleapis.com/stunited/STU%20SUCCESS%20STORIES.pdf'>
-              Download full stories
-            </a>
-          </button>
-        </div>
+    <div className='container'>
+      <div className='button'>
+        <a className='button-portfilio' href={link}>
+          <p>{description}</p>
+        </a>
       </div>
     </div>
   );

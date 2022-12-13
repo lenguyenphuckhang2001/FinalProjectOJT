@@ -58,8 +58,10 @@ function Portfolio(props) {
               </div>
             </div>
           </div>
-
-          <Button />
+          <Button
+            link={'https://storage.googleapis.com/stunited/STU%20SUCCESS%20STORIES.pdf'}
+            description={'Downloads full Stories'}
+          />
         </div>
       </div>
     </div>
