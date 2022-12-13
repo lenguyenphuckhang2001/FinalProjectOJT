@@ -5,6 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import './LetTalk.scss';
 import { Link } from 'react-router-dom';
 import LetTalkValidate from './LetTalkValidate/LetTalkValidate';
+import MetaData from '../../Components/Helmet/MetaData';
 
 function LetTalk(props) {
   const name = useRef(null);
@@ -22,6 +23,7 @@ function LetTalk(props) {
   };
   return (
     <>
+      <MetaData title='Let’s talk – ST United' />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/contact-us-background.png'
         captions={["Let's talk", 'Stay in touch with us']}

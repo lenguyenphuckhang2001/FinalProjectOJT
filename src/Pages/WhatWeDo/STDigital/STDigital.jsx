@@ -5,6 +5,7 @@ import BannerImage from '../../../Components/BannerImage/BannerImage';
 import STDigitalApi from '../../../Api/DigitalAPI';
 import Row from 'react-bootstrap/Row';
 import { useEffect, useState } from 'react';
+import MetaData from '../../../Components/Helmet/MetaData';
 
 const STDigital = () => {
   const [digital, setDigital] = useState([]);
@@ -20,6 +21,7 @@ const STDigital = () => {
 
   return (
     <div>
+      <MetaData title='ST Digital – ST United' />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/sparkgrowth-124408265.jpg'
         captions={['ST DIGITAL', 'Offshore Digital Marketing Services']}

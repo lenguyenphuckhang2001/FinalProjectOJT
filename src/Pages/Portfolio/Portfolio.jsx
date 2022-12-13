@@ -5,6 +5,7 @@ import CardSwiper from '../../Components/CardSwiper/CardSwiper';
 import '../../Components/CardSwiper/CardSwiper.scss';
 import ProjectApi from '../../Api/ProjectAPI';
 import Button from '../../Components/Button/Button';
+import MetaData from '../../Components/Helmet/MetaData';
 
 function Portfolio(props) {
   const [data, setData] = useState([]);
@@ -20,6 +21,7 @@ function Portfolio(props) {
   }, []);
   return (
     <div>
+      <MetaData title='PORTFOLIO – ST United' />
       <div className='portfolio-container'>
         <BannerImage
           backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/web.png'

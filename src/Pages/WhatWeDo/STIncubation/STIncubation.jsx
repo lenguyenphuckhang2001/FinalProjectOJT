@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import IncubationApi from '../../../Api/IncubationAPI';
 import BannerImage from '../../../Components/BannerImage/BannerImage';
 import CardSwiper from '../../../Components/CardSwiper/CardSwiper';
+import MetaData from '../../../Components/Helmet/MetaData';
 import InfoItem from '../../../Components/InfoItem/InfoItem';
 import './STIncubation.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -57,6 +58,7 @@ function STIncubation(props) {
 
   return (
     <>
+      <MetaData title='ST INCUBATION – ST United' />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg'
         captions={[

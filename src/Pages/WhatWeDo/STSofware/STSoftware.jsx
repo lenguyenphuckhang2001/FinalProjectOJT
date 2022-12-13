@@ -6,6 +6,7 @@ import CardSwiper from '../../../Components/CardSwiper/CardSwiper';
 import ProjectApi from './../../../Api/ProjectAPI';
 import ModuleItem from '../../../Components/ModuleItem/ModuleItem';
 import './STSoftware.scss';
+import MetaData from '../../../Components/Helmet/MetaData';
 
 const dataItem = [
   {
@@ -71,6 +72,7 @@ function STSoftware(props) {
 
   return (
     <div>
+      <MetaData title='ST SOFTWARE – ST United' />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/team-.jpg'
         captions={[
