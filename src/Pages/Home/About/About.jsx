@@ -11,9 +11,7 @@ function About() {
       .then((result) => {
         setState(result);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   }, []);
   return (
     <section className='about'>

@@ -17,9 +17,7 @@ const Carousel = () => {
       .then((result) => {
         setState(result);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   }, []);
 
   return (

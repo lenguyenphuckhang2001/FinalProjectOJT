@@ -13,7 +13,6 @@ const STDigital = () => {
   useEffect(() => {
     const getDigital = async () => {
       const dataDigital = await STDigitalApi.getDigital();
-      console.log(dataDigital);
       setDigital(dataDigital);
     };
     getDigital();

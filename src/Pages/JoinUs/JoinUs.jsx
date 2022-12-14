@@ -7,7 +7,6 @@ import '../JoinUs/JoinUs.scss';
 
 function JoinUs(props) {
   const [data, setData] = useState([]);
-  console.log(data);
   useEffect(() => {
     (async () => {
       const response = await CourseApi.getProject();

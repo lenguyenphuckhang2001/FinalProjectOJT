@@ -15,9 +15,7 @@ function HomeStories() {
         });
         setState(filteredData);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   }, []);
   return (
     <section className='home-stories'>

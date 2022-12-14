@@ -19,7 +19,6 @@ function LetTalk(props) {
   const handleSummit = (e) => {
     e.preventDefault();
     setValidate(!validate);
-    console.log(!!name.current.value.trimStart());
   };
   return (
     <>
