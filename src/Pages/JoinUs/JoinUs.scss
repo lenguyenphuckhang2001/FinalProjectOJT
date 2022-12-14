@@ -51,3 +51,12 @@
     }
   }
 }
+
+@include responsive('extra-small') {
+  .test {
+    .text {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
