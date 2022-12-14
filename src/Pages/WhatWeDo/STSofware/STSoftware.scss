@@ -94,3 +94,9 @@
 
 @include responsive('small') {
 }
+
+@include responsive('extra-small') {
+  .container-content {
+    padding: 0px 0px;
+  }
+}
