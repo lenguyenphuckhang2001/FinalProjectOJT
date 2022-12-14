@@ -26,9 +26,9 @@ const STDigital = () => {
         captions={['ST DIGITAL', 'Offshore Digital Marketing Services']}
       />
 
-      <div class='container p-0'>
+      <div className='container p-0'>
         <div className='responsive'>
-          <div class='container p-0'>
+          <div className='container p-0'>
             <div className='title-digital'>
               <h2>STDigital </h2>
               <p className='content'>
@@ -43,7 +43,7 @@ const STDigital = () => {
               </p>
             </div>
           </div>
-          <div class='container'>
+          <div className='container'>
             <div className='about-digital'>
               <Row>
                 <div className='row g-0'>
@@ -72,14 +72,16 @@ const STDigital = () => {
               </Row>
             </div>
           </div>
-          <div class='container'>
+          <div className='container'>
             <div className='our-team'>
               <div className='row'>
                 <div className='team'>Meet our team</div>
                 {digital.map((team) => {
                   return (
-                    <div className='col-12 col-md-3' key={team.id}>
-                      <img src={team.avatar} alt='' className='image_item' />
+                    <div className='col-12 col-md-3 text-center' key={team.id}>
+                      <div className='item-img'>
+                        <img className='img-fluid' src={team.avatar} />
+                      </div>
                       <p className='name_item'>{team.name}</p>
                       <p className='position_item'>{team.jobTitle}</p>
                     </div>
