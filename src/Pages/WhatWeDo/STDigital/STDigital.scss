@@ -21,8 +21,7 @@
 .our-team {
   margin: 0px;
   .item-img {
-    margin-left: 25%;
-    width: 55%;
+    width: 100%;
   }
   .name_item {
     font-weight: 700;
@@ -57,6 +56,12 @@
   }
 }
 @include responsive('medium') {
+  .our-team {
+    .item-img {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
   .name_item {
     text-align: center;
   }
