@@ -48,3 +48,13 @@
     }
   }
 }
+
+@include responsive('extra-small') {
+  .home-stories {
+    .container {
+      .stories-body {
+        padding: 0 0;
+      }
+    }
+  }
+}

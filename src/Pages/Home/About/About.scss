@@ -90,3 +90,18 @@
     }
   }
 }
+@include responsive('extra-small') {
+  .about {
+    .about-content {
+      padding: 0;
+      .about-bottom {
+        .container {
+          padding: 0 0;
+          .row {
+            padding: 0 0;
+          }
+        }
+      }
+    }
+  }
+}
