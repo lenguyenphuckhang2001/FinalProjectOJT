@@ -37,7 +37,7 @@ const CardSwiper = (props) => {
                     <a href='https://www.facebook.com/stunited.vn/'>
                       <i className='fa-brands fa-square-facebook'></i>
                     </a>
-                    <a href=''>
+                    <a href='#'>
                       <i className='fa-brands fa-linkedin'></i>
                     </a>
                   </div>

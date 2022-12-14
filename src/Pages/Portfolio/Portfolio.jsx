@@ -21,7 +21,10 @@ function Portfolio(props) {
   }, []);
   return (
     <div>
-      <MetaData title='PORTFOLIO – ST United' />
+      <MetaData
+        title='PORTFOLIO – ST United'
+        description='From ideas turned into carefully crafted pixels and problems crafted into solutions.'
+      />
       <div className='portfolio-container'>
         <BannerImage
           backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/web.png'

@@ -83,7 +83,7 @@ const Carousel = () => {
                       <div className='partner-item'>
                         <a href={link}>
                           {' '}
-                          <img src={logo} />
+                          <img src={logo} alt='img' />
                         </a>
                       </div>
                     </SwiperSlide>

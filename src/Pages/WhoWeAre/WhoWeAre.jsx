@@ -8,7 +8,10 @@ import CompanyTeam from './CompanyTeam/CompanyTeam';
 function WhoWeAre(props) {
   return (
     <div>
-      <MetaData title='WHO WE ARE – ST United' />
+      <MetaData
+        title='WHO WE ARE – ST United'
+        description='Established on the early of 2016 and known as STD Software serves diverse global clients (Japanese, Australian, US) by offering mainstream services: IT outsourcing, software & website development, mobile applications.'
+      />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg'
         captions={[

@@ -30,21 +30,6 @@ const infoItemData = [
   },
 ];
 
-const data = [
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/iot-e1567668899699.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/nomadspace.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/ciaoflora-1.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/cafedat-1024x1024-1.jpg',
-  },
-];
-
 function STIncubation(props) {
   const [data, setData] = useState([]);
 
@@ -58,7 +43,10 @@ function STIncubation(props) {
 
   return (
     <>
-      <MetaData title='ST INCUBATION – ST United' />
+      <MetaData
+        title='ST INCUBATION – ST United'
+        description="We're not a mentor, expert or coach whatsoever. We are a founder and fight together"
+      />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/entrepreneurship-background-8-1.jpg'
         captions={[

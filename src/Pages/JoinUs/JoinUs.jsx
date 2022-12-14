@@ -16,7 +16,10 @@ function JoinUs(props) {
 
   return (
     <>
-      <MetaData title='Join us – ST United' />
+      <MetaData
+        title='Join us – ST United'
+        description='Building a startup is hard, so we build a family to make it more enjoyable.'
+      />
       <div className='join-us'>
         <BannerImage
           backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/join.jpg'

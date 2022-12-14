@@ -46,7 +46,10 @@ function LetTalk() {
 
   return (
     <>
-      <MetaData title='Let’s talk – ST United' />
+      <MetaData
+        title='Let’s talk – ST United'
+        description='ST United is always glad to hear your comments regarding our services. Please say your think about us'
+      />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/contact-us-background.png'
         captions={["Let's talk", 'Stay in touch with us']}

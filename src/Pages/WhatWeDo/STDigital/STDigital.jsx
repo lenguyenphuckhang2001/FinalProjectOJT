@@ -20,7 +20,7 @@ const STDigital = () => {
 
   return (
     <div>
-      <MetaData title='ST Digital – ST United' />
+      <MetaData title='ST Digital – ST United' description='Offshore Digital Marketing Services' />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/sparkgrowth-124408265.jpg'
         captions={['ST DIGITAL', 'Offshore Digital Marketing Services']}
@@ -81,7 +81,7 @@ const STDigital = () => {
                   return (
                     <div className='col-12 col-md-3 text-center' key={team.id}>
                       <div className='item-img'>
-                        <img className='img-fluid' src={team.avatar} />
+                        <img className='img-fluid' src={team.avatar} alt='img for st digital' />
                       </div>
                       <p className='name_item'>{team.name}</p>
                       <p className='position_item'>{team.jobTitle}</p>
