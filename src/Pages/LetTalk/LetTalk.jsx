@@ -6,20 +6,44 @@ import './LetTalk.scss';
 import { Link } from 'react-router-dom';
 import LetTalkValidate from './LetTalkValidate/LetTalkValidate';
 import MetaData from '../../Components/Helmet/MetaData';
+import Loading from './Loading/Loading';
+import { trimVal } from './util/trimValue';
+import axios from 'axios';
+import AlerValidate from './AlerValidate/AlerValidate';
 
-function LetTalk(props) {
+function LetTalk() {
   const name = useRef(null);
   const email = useRef(null);
   const phone = useRef(null);
   const subject = useRef(null);
   const message = useRef(null);
 
-  const [validate, setValidate] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [result, setResult] = useState([]);
 
   const handleSummit = (e) => {
     e.preventDefault();
-    setValidate(!validate);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      const data = trimVal(name, email, phone, subject, message);
+      if (!data.includes('')) {
+        (async () => {
+          await axios.post('https://contact-devplus.herokuapp.com/api/v1/contact', {
+            name: name.current.value,
+            email: email.current.value,
+            phone: phone.current.value,
+            subject: subject.current.value,
+            message: message.current.value,
+          });
+        })();
+      }
+      setResult(data);
+      setSuccess(true);
+    }, 2000);
   };
+
   return (
     <>
       <MetaData title='Let’s talk – ST United' />
@@ -63,22 +87,22 @@ function LetTalk(props) {
                         <Form.Group className='mb-3' controlId='formBasicName'>
                           <Form.Label className='form-label'>Your Name</Form.Label>
                           <Form.Control type='text' ref={name} />
-                          {validate ? <LetTalkValidate /> : ''}
+                          {result.length > 0 && (result[0] ? '' : <LetTalkValidate />)}
                         </Form.Group>
                         <Form.Group className='mb-3' controlId='formBasicEmail'>
                           <Form.Label className='form-label'>Your Email</Form.Label>
                           <Form.Control type='email' ref={email} />
-                          {validate ? <LetTalkValidate /> : ''}
+                          {result.length > 0 && (result[1] ? '' : <LetTalkValidate />)}
                         </Form.Group>
                         <Form.Group className='mb-3' controlId='formBasicPhone'>
                           <Form.Label className='form-label'>Your Phone</Form.Label>
-                          <Form.Control type='phone' ref={phone} />
-                          {validate ? <LetTalkValidate /> : ''}
+                          <Form.Control type='number' ref={phone} />
+                          {result.length > 0 && (result[2] ? '' : <LetTalkValidate />)}
                         </Form.Group>
                         <Form.Group className='mb-3' controlId='formBasicSubject'>
                           <Form.Label className='form-label'>Subject</Form.Label>
                           <Form.Control type='text' ref={subject} />
-                          {validate ? <LetTalkValidate /> : ''}
+                          {result.length > 0 && (result[3] ? '' : <LetTalkValidate />)}
                         </Form.Group>
                         <Form.Group className='mb-3' controlId='formBasicTextArea'>
                           <Form.Label className='form-label'>Your Message</Form.Label>
@@ -89,15 +113,19 @@ function LetTalk(props) {
                             className='form-textarea'
                             ref={message}
                           />
-                          {validate ? <LetTalkValidate /> : ''}
+                          {result.length > 0 && (result[4] ? '' : <LetTalkValidate />)}
                         </Form.Group>
                         <Button className='button-summit' variant='primary' type='submit'>
                           Send
                         </Button>
-                        {validate ? (
-                          <div className='aler-vali'>
-                            One or more fields have an error. Please check and try again.
-                          </div>
+                        {loading && <Loading />}
+                        {result.includes('') ? (
+                          <AlerValidate
+                            content='One or more fields have an error. Please check and try again.'
+                            validate={false}
+                          />
+                        ) : success ? (
+                          <AlerValidate content='Success' validate={true} />
                         ) : (
                           ''
                         )}

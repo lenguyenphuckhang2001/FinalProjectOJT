@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import '../../Common\ scss/Responsive.scss';
+.portfolio-wrapper {
+  background: white;
+}
 .portfolio-container {
   font-family: 'Roboto', sans-serif;
 
   .title {
     .title-content {
       line-height: 32px;
-      margin: 55px 0 4px 0;
+      margin: 0 0 4px 0;
+      padding-top: 55px;
       text-transform: inherit;
       text-align: center;
       font-family: 'Roboto';

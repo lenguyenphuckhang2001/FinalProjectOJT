@@ -37,6 +37,7 @@ function HomeStories() {
                     img={item.img}
                     description={item.description}
                     tech={item.tech}
+                    key={item.id}
                   />
                 );
               })}

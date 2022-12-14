@@ -29,7 +29,12 @@ function About() {
               <div className='row g-0'>
                 {state.map((item) => {
                   return (
-                    <CardHover img={item.img} name={item.name} description={item.description} />
+                    <CardHover
+                      img={item.img}
+                      name={item.name}
+                      description={item.description}
+                      key={item.id}
+                    />
                   );
                 })}
               </div>

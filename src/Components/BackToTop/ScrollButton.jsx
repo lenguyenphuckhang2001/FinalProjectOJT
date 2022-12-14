@@ -24,11 +24,11 @@ const ScrollButton = () => {
     <div>
       {showBtn ? (
         <div className='scrollToTopOn' onClick={scrollToTop}>
-          <i class='fa-sharp fa-solid fa-angle-up'></i>
+          <i className='fa-sharp fa-solid fa-angle-up'></i>
         </div>
       ) : (
         <div className='scrollToTopOff' onClick={scrollToTop}>
-          <i class='fa-sharp fa-solid fa-angle-up'></i>
+          <i className='fa-sharp fa-solid fa-angle-up'></i>
         </div>
       )}
     </div>

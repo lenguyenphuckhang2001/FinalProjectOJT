@@ -31,34 +31,37 @@ function Portfolio(props) {
           ]}
         />
 
-        <div className='container'>
-          <div>
-            <div className='title'>
-              <div className='title-content'>
-                <h2 className='typical'>Typical successful stories</h2>
-              </div>
-              <div className='content-portfolio'>
-                <p className='main-content'>
-                  Meeting deadlines and ensuring high standards are our style of life. 82% of our
-                  customers have chosen our team for their 2nd project.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='portfolio-item'>
-            <div className='card-swp p-0'>
-              <div className='row g-0 p-0'>
-                {data.map((item) => (
-                  <CardSwiper
-                    name={item.name}
-                    description={item.description}
-                    tech={item.tech}
-                    img={item.img}
-                    key={item.id}
-                  />
-                ))}
+        <div className='portfolio-wrapper'>
+          <div className='container'>
+            <div>
+              <div className='title'>
+                <div className='title-content'>
+                  <h2 className='typical'>Typical successful stories</h2>
+                </div>
+                <div className='content-portfolio'>
+                  <p className='main-content'>
+                    Meeting deadlines and ensuring high standards are our style of life. 82% of our
+                    customers have chosen our team for their 2nd project.
+                  </p>
+                </div>
               </div>
             </div>
+            <div className='portfolio-item'>
+              <div className='card-swp p-0'>
+                <div className='row g-0 p-0'>
+                  {data.map((item) => (
+                    <CardSwiper
+                      name={item.name}
+                      description={item.description}
+                      tech={item.tech}
+                      img={item.img}
+                      key={item.id}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <Button />
           </div>
           <Button
             link={'https://storage.googleapis.com/stunited/STU%20SUCCESS%20STORIES.pdf'}

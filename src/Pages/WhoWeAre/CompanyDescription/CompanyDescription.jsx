@@ -31,7 +31,7 @@ const CompanyDescription = () => {
             </li>
           </ul>
         </div>
-        <span class='vc_sep_line'></span>
+        <span className='vc_sep_line'></span>
         <div className='wpb_wrapper'>
           <h1 style={{ textAlign: 'center' }}>WE ARE ST UNITED</h1>
         </div>

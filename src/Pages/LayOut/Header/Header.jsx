@@ -75,7 +75,7 @@ function Header() {
                 onClick={() => {
                   handleOnClick();
                 }}
-                class='fa-solid fa-bars'
+                className='fa-solid fa-bars'
               ></i>
             </div>
 

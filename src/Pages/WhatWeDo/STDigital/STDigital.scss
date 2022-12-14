@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
 @import '../../../Common\ scss/Responsive';
-
+.digital-wrapper {
+  background: white;
+}
 .title-digital {
   h2 {
     font: 30px 'Roboto', sans-serif;
