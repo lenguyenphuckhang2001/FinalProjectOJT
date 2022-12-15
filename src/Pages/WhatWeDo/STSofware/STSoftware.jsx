@@ -111,15 +111,13 @@ function STSoftware() {
               </div>
               <div className='row g-0'>
                 {data.map(({ name, tech, img, description, id }) => (
-                  <>
-                    <CardSwiper
-                      name={name}
-                      img={img}
-                      description={description}
-                      tech={tech}
-                      key={id}
-                    />
-                  </>
+                  <CardSwiper
+                    name={name}
+                    img={img}
+                    description={description}
+                    tech={tech}
+                    key={id}
+                  />
                 ))}
               </div>
             </div>
