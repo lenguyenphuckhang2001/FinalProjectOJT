@@ -1,8 +1,10 @@
+@import '../../Common\ scss/Responsive.scss';
+
 .module-item-info {
   text-align: left;
   box-shadow: none;
   display: table;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     margin-bottom: 30px;
   }
   .block-icon-info {
@@ -12,8 +14,8 @@
     vertical-align: top;
     min-width: 70px;
 
-    @media (max-width: 767px) {
-      min-width: 50px;
+    @media (max-width: 768px) {
+      min-width: 40px;
     }
     img {
       height: auto;
@@ -34,8 +36,12 @@
       font-weight: 300;
       margin-bottom: 10px;
       color: #636363;
-      @media (max-width: 767px) {
-        font-size: 14px;
+      @media (max-width: 797px) {
+        font-size: 16px;
+        line-height: 23px;
+      }
+      @media (max-width: 720px) {
+        font-size: 12px;
         line-height: 23px;
       }
     }
@@ -48,5 +54,11 @@
       display: inline;
       color: #00aeef;
     }
+  }
+}
+
+@include responsive('extra-small') {
+  .block-icon-info {
+    min-width: 45px !important;
   }
 }
