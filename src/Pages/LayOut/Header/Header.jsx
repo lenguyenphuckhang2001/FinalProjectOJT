@@ -29,6 +29,7 @@ function Header() {
               <img
                 className='img-fluid'
                 src='https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png'
+                alt='this is image for header'
               />
             </Link>
           </div>
@@ -148,6 +149,7 @@ function Header() {
               <img
                 className='img-fluid'
                 src='https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png'
+                alt='for mobile devices'
               />
             </Link>
           </div>

@@ -11,12 +11,12 @@
       display: block;
       margin: 0 0 20px;
       text-align: center;
-      padding-top: 55px;
+      padding-top: 50px;
     }
   }
 
   .text {
-    padding: 60px 99px;
+    padding: 40px 99px;
   }
 }
 
@@ -48,6 +48,16 @@
   .join-us {
     .text {
       padding: 60px 20px;
+    }
+  }
+}
+
+@include responsive('extra-small') {
+  .test {
+    .text {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
     }
   }
 }

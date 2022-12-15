@@ -72,7 +72,10 @@ function STSoftware() {
 
   return (
     <div>
-      <MetaData title='ST SOFTWARE – ST United' />
+      <MetaData
+        title='ST SOFTWARE – ST United'
+        description='We offer a wealth of services to address your technology needs'
+      />
       <BannerImage
         backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/team-.jpg'
         captions={[

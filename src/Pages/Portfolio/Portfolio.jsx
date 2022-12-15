@@ -21,7 +21,10 @@ function Portfolio(props) {
   }, []);
   return (
     <div>
-      <MetaData title='PORTFOLIO – ST United' />
+      <MetaData
+        title='PORTFOLIO – ST United'
+        description='From ideas turned into carefully crafted pixels and problems crafted into solutions.'
+      />
       <div className='portfolio-container'>
         <BannerImage
           backgroundUrl='https://stunited.vn/wp-content/uploads/2019/09/web.png'
@@ -31,32 +34,34 @@ function Portfolio(props) {
           ]}
         />
 
-        <div className='container'>
-          <div>
-            <div className='title'>
-              <div className='title-content'>
-                <h2 className='typical'>Typical successful stories</h2>
-              </div>
-              <div className='content-portfolio'>
-                <p className='main-content'>
-                  Meeting deadlines and ensuring high standards are our style of life. 82% of our
-                  customers have chosen our team for their 2nd project.
-                </p>
+        <div className='portfolio-wrapper'>
+          <div className='container'>
+            <div>
+              <div className='title'>
+                <div className='title-content'>
+                  <h2 className='typical'>Typical successful stories</h2>
+                </div>
+                <div className='content-portfolio'>
+                  <p className='main-content'>
+                    Meeting deadlines and ensuring high standards are our style of life. 82% of our
+                    customers have chosen our team for their 2nd project.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='portfolio-item'>
-            <div className='card-swp p-0'>
-              <div className='row g-0 p-0'>
-                {data.map((item) => (
-                  <CardSwiper
-                    name={item.name}
-                    description={item.description}
-                    tech={item.tech}
-                    img={item.img}
-                    key={item.id}
-                  />
-                ))}
+            <div className='portfolio-item'>
+              <div className='card-swp p-0'>
+                <div className='row g-0 p-0'>
+                  {data.map((item) => (
+                    <CardSwiper
+                      name={item.name}
+                      description={item.description}
+                      tech={item.tech}
+                      img={item.img}
+                      key={item.id}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
