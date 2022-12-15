@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -27,22 +27,22 @@ function Banner() {
         className='BannerSwiper'
       >
         <SwiperSlide>
-          <div className='bg'></div>
+          <div className='bg slide-1'></div>
           <img src='https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg' />
           <h2>Collaborate to kick-start your software project</h2>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='bg'></div>
+          <div className='bg slide-2'></div>
           <img src='https://stunited.vn/wp-content/uploads/2019/09/01.1-Mobile-Trang-Chu-Version-01.png' />
           <h2>We code, we care</h2>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='bg'></div>
+          <div className='bg slide-3'></div>
           <img src='https://stunited.vn/wp-content/uploads/2019/09/image.jpg' />
           <h2>We also do digital marketing</h2>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='bg'></div>
+          <div className='bg slide-4'></div>
           <img src='https://stunited.vn/wp-content/uploads/2019/09/startup_3.jpg' />
           <h2>And we are incubating startup projects too...</h2>
         </SwiperSlide>
