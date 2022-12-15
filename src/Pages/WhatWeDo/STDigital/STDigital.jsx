@@ -30,7 +30,7 @@ const STDigital = () => {
           <div className='responsive'>
             <div className='container p-0'>
               <div className='title-digital'>
-                <h2>STDigital </h2>
+                <h1>STDigital </h1>
                 <p className='content'>
                   <strong className='sub-content'>ST Digital</strong> offers professional offshore
                   digital marketing services that can make your business stand out from the digital
