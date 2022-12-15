@@ -77,13 +77,12 @@ const Carousel = () => {
                 className='mySwiper col-sm-12'
               >
                 {state.map((item) => {
-                  let { logo, link } = item;
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={item.id}>
                       <div className='partner-item'>
-                        <a href={link}>
+                        <a href={item.link}>
                           {' '}
-                          <img src={logo} />
+                          <img src={item.logo} />
                         </a>
                       </div>
                     </SwiperSlide>

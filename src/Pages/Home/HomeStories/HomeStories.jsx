@@ -33,6 +33,7 @@ function HomeStories() {
               {state.map((item) => {
                 return (
                   <CardSwiper
+                    key={item.id}
                     name={item.name}
                     img={item.img}
                     description={item.description}

@@ -10,7 +10,7 @@ import MetaData from '../../../Components/Helmet/MetaData';
 
 const dataItem = [
   {
-    id: 1,
+    id: '1',
     icon: 'fa-solid fa-flag',
     title: 'Web App Development',
     paragraph:
@@ -18,7 +18,7 @@ const dataItem = [
     link: 'See more',
   },
   {
-    id: 2,
+    id: '2',
     icon: 'fa-solid fa-flag',
     title: 'Mobile App Development',
     paragraph:
@@ -26,7 +26,7 @@ const dataItem = [
     link: 'See more',
   },
   {
-    id: 3,
+    id: '3',
     icon: 'fa-solid fa-flag',
     title: 'Custom Software Development',
     paragraph:
@@ -34,7 +34,7 @@ const dataItem = [
     link: 'See more',
   },
   {
-    id: 4,
+    id: '4',
     icon: 'fa-solid fa-users',
     title: 'Dedicated Team',
     paragraph:
@@ -42,7 +42,7 @@ const dataItem = [
     link: 'See more',
   },
   {
-    id: 5,
+    id: '5',
     icon: 'fa-solid fa-flag',
     title: 'Technology Consulting',
     paragraph:
@@ -50,7 +50,7 @@ const dataItem = [
     link: 'See more',
   },
   {
-    id: 6,
+    id: '6',
     icon: 'fa-solid fa-flag',
     title: 'AI/Machine Learning',
     paragraph:
@@ -59,7 +59,7 @@ const dataItem = [
   },
 ];
 
-function STSoftware(props) {
+function STSoftware() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -86,6 +86,7 @@ function STSoftware(props) {
             <div className='row'>
               {dataItem.map((dataItem) => (
                 <ModuleItem
+                  key={dataItem.id}
                   title={dataItem.title}
                   paragraph={dataItem.paragraph}
                   icon={dataItem.icon}

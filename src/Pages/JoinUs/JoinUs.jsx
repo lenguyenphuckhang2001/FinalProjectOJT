@@ -29,7 +29,12 @@ function JoinUs(props) {
           <div className='text'>
             <div className='row g-0'>
               {data.map((item) => (
-                <CardJoin img={item.img} description={item.description} name={item.title} />
+                <CardJoin
+                  key={item.id}
+                  img={item.img}
+                  description={item.description}
+                  name={item.title}
+                />
               ))}
             </div>
           </div>

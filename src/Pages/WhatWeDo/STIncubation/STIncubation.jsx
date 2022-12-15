@@ -11,45 +11,31 @@ import './STIncubation.scss';
 
 const infoItemData = [
   {
+    id: '1',
     title: 'Incubator Program',
     paragraph:
       'Targeting early-stage startups in multiple sectors, our goal is to support founders with practical education and mentorship from idea validation, MVP development, and business validation stage.',
     img: 'https://stunited.vn/wp-content/uploads/2019/09/icuba-150x150.png',
   },
   {
+    id: '2',
     title: 'Coworking Space',
     paragraph:
       'Based on coworking platform with IoT Space, Nomad Space... provides not only space for working but also an opportunity for members to thrive by exploring collaboration, learning, and access to our strategic network.',
     img: 'https://stunited.vn/wp-content/uploads/2019/09/icons-400sq-record-keeping-office-space-150x150.png',
   },
   {
+    id: '3',
     title: 'Strategic Funding',
     paragraph:
       'ST United is considering an early stage VC fund that invests in technology startups in Vietnam, particularly Danang, at their early and growth stages. We provide funding, and assistance by establishing strategic partnerships to help startups scale their businesses',
     img: 'https://stunited.vn/wp-content/uploads/2019/09/Money-512-150x150.png',
   },
 ];
-
-const data = [
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/iot-e1567668899699.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/nomadspace.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/ciaoflora-1.jpg',
-  },
-  {
-    img: 'https://stunited.vn/wp-content/uploads/2019/09/cafedat-1024x1024-1.jpg',
-  },
-];
-
 function STIncubation(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    //**using IIFE function
     (async () => {
       const response = await IncubationApi.getIncubation();
       setData(response);
@@ -91,7 +77,12 @@ function STIncubation(props) {
               <div className='service-blocks'>
                 <Row xs={1} md={3} lg={3}>
                   {infoItemData.map((item) => (
-                    <InfoItem imgSrc={item.img} title={item.title} paragraph={item.paragraph} />
+                    <InfoItem
+                      key={item.id}
+                      imgSrc={item.img}
+                      title={item.title}
+                      paragraph={item.paragraph}
+                    />
                   ))}
                 </Row>
               </div>
