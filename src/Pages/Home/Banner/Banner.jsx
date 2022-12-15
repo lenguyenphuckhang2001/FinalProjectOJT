@@ -28,22 +28,31 @@ function Banner() {
       >
         <SwiperSlide>
           <div className='bg slide-1'></div>
-          <img src='https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg' />
+          <img
+            src='https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg'
+            alt='Project'
+          />
           <h2>Collaborate to kick-start your software project</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-2'></div>
-          <img src='https://stunited.vn/wp-content/uploads/2019/09/01.1-Mobile-Trang-Chu-Version-01.png' />
+          <img
+            src='https://stunited.vn/wp-content/uploads/2019/09/01.1-Mobile-Trang-Chu-Version-01.png'
+            alt='project'
+          />
           <h2>We code, we care</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-3'></div>
-          <img src='https://stunited.vn/wp-content/uploads/2019/09/image.jpg' />
+          <img
+            src='https://stunited.vn/wp-content/uploads/2019/09/image.jpg'
+            alt='digital marketing'
+          />
           <h2>We also do digital marketing</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-4'></div>
-          <img src='https://stunited.vn/wp-content/uploads/2019/09/startup_3.jpg' />
+          <img src='https://stunited.vn/wp-content/uploads/2019/09/startup_3.jpg' alt='member' />
           <h2>And we are incubating startup projects too...</h2>
         </SwiperSlide>
       </Swiper>

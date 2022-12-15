@@ -6,7 +6,7 @@ const CardSwiper = (props) => {
       <div className='card-swiper-inner'>
         <div className='card-swiper-wrapper'>
           <div className='card-swiper'>
-            <img src={props.img} alt='' />
+            <img src={props.img} alt='This is Card Swiper' />
             <div className='card-swiper-overlay-1'>
               <div className='card-swiper-text'>
                 <p>{props.name}</p>
