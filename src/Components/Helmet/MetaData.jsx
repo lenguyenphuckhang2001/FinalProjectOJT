@@ -4,6 +4,7 @@ const MetaData = ({ title, description }) => {
   return (
     <Helmet>
       <title>{title}</title>
+      <link rel='canonical' href='https://final-project-flyteam-dp04-gw.vercel.app/' />
       <meta name='description' content={description} />
       <link rel='canonical' href='https://final-project-flyteam-dp04-gw.vercel.app/' />
       <meta property='og:type' content='website' />
