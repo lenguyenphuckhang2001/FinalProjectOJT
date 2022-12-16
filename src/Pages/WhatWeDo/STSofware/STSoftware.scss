@@ -7,17 +7,15 @@
 
 .content-block {
   font-family: 'Roboto', sans-serif;
-  padding-top: 50px;
-  margin: 0px 12%;
+  padding-top: 100px;
+  margin: 0px 11.5%;
 
   .module-item {
     text-align: left;
     box-shadow: none;
     display: table;
     margin: 0px 10px;
-    @media (max-width: 767px) {
-      margin-bottom: 30px;
-    }
+
     .block-icon {
       font-size: 40px;
       padding-right: 20px;
@@ -25,36 +23,35 @@
       vertical-align: top;
       min-width: 70px;
 
-      @media (max-width: 767px) {
-        min-width: 50px;
-      }
       img {
         height: auto;
         max-width: 100%;
         border: 0;
       }
     }
+
     .block-content {
       h3 {
         font-size: 20px;
         line-height: 28px;
         font-weight: 500;
       }
+
       p {
+        color: #636363;
         font-size: 16px;
         line-height: 22px;
         font-weight: 300;
         margin: 0 0 10px 0;
-        color: #636363;
-        @media (max-width: 767px) {
-          font-size: 12px;
-          line-height: 23px;
-        }
+        max-width: 100%;
       }
     }
   }
 }
 
+.container-content {
+  padding: 0px 70px;
+}
 .content-stories {
   font-family: 'Roboto';
   text-align: center;
@@ -74,30 +71,47 @@
   }
 }
 
-.container-content {
-  padding: 0px 70px;
-}
-
 @include responsive('extra-large') {
   .content-block {
-    margin: 50px 0px;
+    margin: 0px 0px;
+    .module-item {
+      max-width: 100%;
+    }
   }
-  .block-content {
-    margin: -15px -50px;
+  .container-content {
+    padding: 0px;
   }
-}
-
-@include responsive('large') {
 }
 
 @include responsive('medium') {
+  .content-block {
+    .module-item {
+      margin-bottom: 30px;
+      .block-icon {
+        min-width: 50px;
+        p {
+          font-size: 12px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
 }
 
 @include responsive('small') {
+  .content-block {
+    margin: 0px 55px;
+  }
+  .container-content {
+    margin: 0px 39px;
+    .content-stories {
+      padding-top: 20%;
+    }
+  }
 }
 
 @include responsive('extra-small') {
-  .container-content {
-    padding: 0px 0px;
+  .content-block {
+    padding-top: 80px;
   }
 }

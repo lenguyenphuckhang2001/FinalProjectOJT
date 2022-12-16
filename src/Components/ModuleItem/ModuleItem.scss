@@ -21,6 +21,9 @@
     @media (max-width: 767px) {
       min-width: 50px;
     }
+    @include responsive('small') {
+      padding-right: 40px;
+    }
     img {
       height: auto;
       max-width: 100%;
