@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -28,10 +29,7 @@ function Banner() {
       >
         <SwiperSlide>
           <div className='bg slide-1'></div>
-          <img
-            src='https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg'
-            alt='Project'
-          />
+          <img src='/img/banner1.jpeg' alt='Project' />
           <h2>Collaborate to kick-start your software project</h2>
         </SwiperSlide>
         <SwiperSlide>
@@ -44,15 +42,12 @@ function Banner() {
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-3'></div>
-          <img
-            src='https://stunited.vn/wp-content/uploads/2019/09/image.jpg'
-            alt='digital marketing'
-          />
+          <img src='/img/banner2.png' alt='digital marketing' />
           <h2>We also do digital marketing</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-4'></div>
-          <img src='https://stunited.vn/wp-content/uploads/2019/09/startup_3.jpg' alt='member' />
+          <img src='/img/banner3.jpg' alt='member' />
           <h2>And we are incubating startup projects too...</h2>
         </SwiperSlide>
       </Swiper>

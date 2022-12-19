@@ -1,5 +1,5 @@
 @import '../../Common\ scss/Responsive.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 .card-swiper-inner {
   box-sizing: border-box;
   padding-left: 15px;
@@ -63,6 +63,7 @@
           }
         }
         p {
+          font-weight: 900;
           margin-bottom: 8px;
         }
         span {
@@ -104,6 +105,7 @@
     }
   }
   p {
+    font-weight: 700;
     a {
       font-size: 14px;
       color: black;
@@ -141,25 +143,70 @@
     }
   }
 }
-
-@include responsive('large') {
-  .card-swiper-inner {
-    padding: 0 10px;
-  }
-}
-@include responsive('medium') {
+@include responsive('extra-large') {
   .card-swiper-inner {
     .card-swiper {
       .card-swiper-overlay-1 {
         .card-swiper-text {
+          p {
+            margin-bottom: 2px;
+          }
+        }
+        .card-swiper-icon {
+          margin-top: 10px;
+
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive('large') {
+  .card-swiper-inner {
+    padding: 0 15px;
+  }
+}
+@include responsive('medium') {
+  
+  .card-swiper-inner {
+    .card-swiper {
+      .card-swiper-overlay-1 {
+        .card-swiper-text {
+          p {
+            margin-bottom: 0;
+            font-size: 14px;
+          }
           span {
             font-size: 14px;
+          }
+          .card-swiper-icon {
+            margin-top: 12px;
+            i {
+              font-size: 15px;
+            }
           }
         }
       }
       .card-swiper-overlay-2 {
         display: none;
         opacity: none;
+      }
+    }
+  }
+}
+@include responsive('extra-large') {
+  .card-swiper-inner {
+    .card-swiper-inner {
+      .card-swiper {
+        .card-swiper-overlay-1 {
+          .card-swiper-text {
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
       }
     }
   }

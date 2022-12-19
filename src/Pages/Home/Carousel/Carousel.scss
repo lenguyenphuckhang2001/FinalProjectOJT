@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 .partner {
+  font-family: 'Roboto', sans-serif;
   background: rgb(245, 245, 245);
   padding-top: 35px;
   padding-bottom: 40px;
@@ -11,7 +12,7 @@
       .partner-top {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
         h2 {
           font-family: 'Roboto', sans-serif;
           font-size: 24px;
@@ -69,7 +70,17 @@
     }
   }
 }
-
+@include responsive('extra-large') {
+  .partner {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .partner-inner {
+        padding: 55px 0;
+      }
+    }
+  }
+}
 @include responsive('medium') {
   .partner-top-button {
     display: none;
@@ -92,10 +103,49 @@
 }
 @include responsive('small') {
   .partner {
-    .partner-inner {
-      .partner-top {
-        h2 {
-          width: 75%;
+    .container {
+      .partner-inner {
+        padding: 50px 30px;
+        .partner-top {
+          padding-right: 10%;
+          h2 {
+            width: 75%;
+          }
+        }
+        .partner-bottom {
+          .mySwiper {
+            .partner-item {
+              img {
+                height: 120px;
+                width: 120px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive('extra-small') {
+  .partner {
+    .container {
+      .partner-inner {
+        padding: 50px 10px;
+        .partner-top {
+          padding-right: 10%;
+          h2 {
+            width: 75%;
+          }
+        }
+        .partner-bottom {
+          .mySwiper {
+            .partner-item {
+              img {
+                height: 100px;
+                width: 100px;
+              }
+            }
+          }
         }
       }
     }

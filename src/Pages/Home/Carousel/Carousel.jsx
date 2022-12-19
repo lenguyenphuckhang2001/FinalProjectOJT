@@ -61,11 +61,11 @@ const Carousel = () => {
                     slidesPerView: 3,
                     slidesPerGroup: 3,
                   },
-                  720: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
+                  768: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
                   },
-                  1024: {
+                  992: {
                     slidesPerView: 4,
                     slidesPerGroup: 4,
                   },
