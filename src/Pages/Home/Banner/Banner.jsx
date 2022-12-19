@@ -29,14 +29,14 @@ function Banner() {
       >
         <SwiperSlide>
           <div className='bg slide-1'></div>
-          <img src='/img/banner1.jpeg' alt='Project' />
+          <img src='/img/banner1.jpeg' alt='St-United Team' />
           <h2>Collaborate to kick-start your software project</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-2'></div>
           <img
             src='https://stunited.vn/wp-content/uploads/2019/09/01.1-Mobile-Trang-Chu-Version-01.png'
-            alt='project'
+            alt='Project slide'
           />
           <h2>We code, we care</h2>
         </SwiperSlide>

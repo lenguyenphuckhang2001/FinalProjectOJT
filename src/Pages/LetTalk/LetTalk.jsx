@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import LetTalkValidate from './LetTalkValidate/LetTalkValidate';
 import MetaData from '../../Components/Helmet/MetaData';
 import Loading from './Loading/Loading';
-import { trimVal } from './util/trimValue';
-import axios from 'axios';
+import { trimVal } from '../../util/ultilities';
 import AlerValidate from './AlerValidate/AlerValidate';
+import SendMailAPI from '../../Api/SendMailAPI';
 
 function LetTalk() {
   const name = useRef(null);
@@ -21,27 +21,35 @@ function LetTalk() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [result, setResult] = useState([]);
+  const [emailAndPhoneValidate, setEmailAndPhoneValidate] = useState([]);
 
-  const handleSummit = (e) => {
+  const handleSummit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      const data = trimVal(name, email, phone, subject, message);
-      if (!data.includes('')) {
-        (async () => {
-          await axios.post('https://contact-devplus.herokuapp.com/api/v1/contact', {
-            name: name.current.value,
-            email: email.current.value,
-            phone: phone.current.value,
-            subject: subject.current.value,
-            message: message.current.value,
-          });
-        })();
+    try {
+      const response = await SendMailAPI.sendMail(
+        name.current.value,
+        email.current.value,
+        phone.current.value,
+        subject.current.value,
+        message.current.value,
+      );
+      if (response.success) {
+        setLoading(false);
+        const data = trimVal(name, email, phone, subject, message);
+        setResult(data);
+        setSuccess(true);
+        setEmailAndPhoneValidate([]);
       }
-      setResult(data);
-      setSuccess(true);
-    }, 2000);
+    } catch (error) {
+      if (!error.success) {
+        setLoading(false);
+        const data = trimVal(name, email, phone, subject, message);
+        setResult(data);
+        setSuccess(false);
+        setEmailAndPhoneValidate(error.emailAndPhoneValidate);
+      }
+    }
   };
 
   return (
@@ -56,94 +64,114 @@ function LetTalk() {
       />
       <div className='let-talk-container'>
         <div className='container p-md-0'>
-          <div className='title-wrapper'>
-            <ol className='list-item'>
-              <li>
-                <Link className='link-talk' to='/'>
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li>
-                <IoIosArrowForward className='icon-pad' />
-              </li>
-              <li className='li-text'>Let's Talk</li>
-            </ol>
-            <div className='title-wraper'>
-              <h1>Let’s talk</h1>
+          <div className='let-talk-wrapper'>
+            <div className='title-wrapper'>
+              <ol className='list-item'>
+                <li>
+                  <Link className='link-talk' to='/'>
+                    <span>Home</span>
+                  </Link>
+                </li>
+                <li>
+                  <IoIosArrowForward className='icon-pad' />
+                </li>
+                <li className='li-text'>Let's Talk</li>
+              </ol>
+              <div className='title-wraper'>
+                <h1>Let’s talk</h1>
+              </div>
             </div>
-          </div>
-          <div className='page-main'>
-            <div className='white-block'>
-              <div className='wraper-content'>
-                <Row sm={1} md={2}>
-                  <Col md={8}>
-                    <div className='top-content'>
-                      <p>
-                        <strong>ST United</strong> is always glad to hear your comments regarding
-                        our services. Whether you have any questions, or wish to get a quote for
-                        your project, or require further information about what we can offer you,
-                        please do not hesitate to contact us
-                      </p>
-                    </div>
-                    <div className='form-content'>
-                      <Form onSubmit={handleSummit}>
-                        <Form.Group className='mb-3' controlId='formBasicName'>
-                          <Form.Label className='form-label'>Your Name</Form.Label>
-                          <Form.Control type='text' ref={name} />
-                          {result.length > 0 && (result[0] ? '' : <LetTalkValidate />)}
-                        </Form.Group>
-                        <Form.Group className='mb-3' controlId='formBasicEmail'>
-                          <Form.Label className='form-label'>Your Email</Form.Label>
-                          <Form.Control type='email' ref={email} />
-                          {result.length > 0 && (result[1] ? '' : <LetTalkValidate />)}
-                        </Form.Group>
-                        <Form.Group className='mb-3' controlId='formBasicPhone'>
-                          <Form.Label className='form-label'>Your Phone</Form.Label>
-                          <Form.Control type='number' ref={phone} />
-                          {result.length > 0 && (result[2] ? '' : <LetTalkValidate />)}
-                        </Form.Group>
-                        <Form.Group className='mb-3' controlId='formBasicSubject'>
-                          <Form.Label className='form-label'>Subject</Form.Label>
-                          <Form.Control type='text' ref={subject} />
-                          {result.length > 0 && (result[3] ? '' : <LetTalkValidate />)}
-                        </Form.Group>
-                        <Form.Group className='mb-3' controlId='formBasicTextArea'>
-                          <Form.Label className='form-label'>Your Message</Form.Label>
-                          <Form.Control
-                            as='textarea'
-                            placeholder='Leave a message here'
-                            style={{ height: '100px' }}
-                            className='form-textarea'
-                            ref={message}
-                          />
-                          {result.length > 0 && (result[4] ? '' : <LetTalkValidate />)}
-                        </Form.Group>
-                        <Button className='button-summit' variant='primary' type='submit'>
-                          Send
-                        </Button>
-                        {loading && <Loading />}
-                        {result.includes('') ? (
-                          <AlerValidate
-                            content='One or more fields have an error. Please check and try again.'
-                            validate={false}
-                          />
-                        ) : success ? (
-                          <AlerValidate content='Success' validate={true} />
-                        ) : (
-                          ''
-                        )}
-                      </Form>
-                    </div>
-                  </Col>
-                  <Col md={4}>
-                    <div className='info'>
-                      <h4>Office</h4>
-                      <p>Address: Nomad Space, No.14 An Thuong 18, Danang, Vietnam</p>
-                      <p>Hotline: (+84) 777 463 183</p>
-                      <p>Email: hello(at)stunited.vn</p>
-                    </div>
-                  </Col>
-                </Row>
+            <div className='page-main'>
+              <div className='white-block'>
+                <div className='wraper-content'>
+                  <Row sm={1} md={2}>
+                    <Col md={8}>
+                      <div className='top-content'>
+                        <p>
+                          <strong>ST United</strong> is always glad to hear your comments regarding
+                          our services. Whether you have any questions, or wish to get a quote for
+                          your project, or require further information about what we can offer you,
+                          please do not hesitate to contact us
+                        </p>
+                      </div>
+                      <div className='form-content'>
+                        <Form onSubmit={handleSummit}>
+                          <Form.Group className='mb-3' controlId='formBasicName'>
+                            <Form.Label className='form-label'>Your Name</Form.Label>
+                            <Form.Control type='text' ref={name} placeholder='Ex: Nguyen Van A' />
+                            {result.length > 0 && (result[0] ? '' : <LetTalkValidate />)}
+                          </Form.Group>
+                          <Form.Group className='mb-3' controlId='formBasicEmail'>
+                            <Form.Label className='form-label'>Your Email</Form.Label>
+                            <Form.Control
+                              type='email'
+                              ref={email}
+                              placeholder='Ex: NguyenVanA@gmail.com'
+                            />
+                            {result.length > 0 && (result[1] ? '' : <LetTalkValidate />)}
+                            {emailAndPhoneValidate.includes('email') ? (
+                              <LetTalkValidate message='Please enter a valid email' />
+                            ) : (
+                              ''
+                            )}
+                          </Form.Group>
+                          <Form.Group className='mb-3' controlId='formBasicPhone'>
+                            <Form.Label className='form-label'>Your Phone</Form.Label>
+                            <Form.Control type='text' ref={phone} placeholder='Ex: 0511853213' />
+                            {result.length > 0 && (result[2] ? '' : <LetTalkValidate />)}
+                            {emailAndPhoneValidate.includes('phone') ? (
+                              <LetTalkValidate message='Please enter number' />
+                            ) : (
+                              ''
+                            )}
+                          </Form.Group>
+                          <Form.Group className='mb-3' controlId='formBasicSubject'>
+                            <Form.Label className='form-label'>Subject</Form.Label>
+                            <Form.Control
+                              type='text'
+                              ref={subject}
+                              placeholder='Leave a subject here'
+                            />
+                            {result.length > 0 && (result[3] ? '' : <LetTalkValidate />)}
+                          </Form.Group>
+                          <Form.Group className='mb-3' controlId='formBasicTextArea'>
+                            <Form.Label className='form-label'>Your Message</Form.Label>
+                            <Form.Control
+                              as='textarea'
+                              placeholder='Leave a message here'
+                              style={{ height: '100px' }}
+                              className='form-textarea'
+                              ref={message}
+                            />
+                            {result.length > 0 && (result[4] ? '' : <LetTalkValidate />)}
+                          </Form.Group>
+                          <Button className='button-summit' variant='primary' type='submit'>
+                            Send
+                          </Button>
+                          {loading && <Loading />}
+                          {result.includes('') || emailAndPhoneValidate.length > 0 ? (
+                            <AlerValidate
+                              content='One or more fields have an error. Please check and try again.'
+                              validate={false}
+                            />
+                          ) : success ? (
+                            <AlerValidate content='Success' validate={true} />
+                          ) : (
+                            ''
+                          )}
+                        </Form>
+                      </div>
+                    </Col>
+                    <Col md={4}>
+                      <div className='info'>
+                        <h4>Office</h4>
+                        <p>Address: Nomad Space, No.14 An Thuong 18, Danang, Vietnam</p>
+                        <p>Hotline: (+84) 777 463 183</p>
+                        <p>Email: hello(at)stunited.vn</p>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
               </div>
             </div>
           </div>

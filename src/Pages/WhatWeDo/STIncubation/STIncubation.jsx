@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import IncubationApi from '../../../Api/IncubationAPI';
 import BannerImage from '../../../Components/BannerImage/BannerImage';
 import CardSwiper from '../../../Components/CardSwiper/CardSwiper';

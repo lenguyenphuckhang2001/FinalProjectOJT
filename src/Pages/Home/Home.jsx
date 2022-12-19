@@ -3,9 +3,8 @@ import HomeStories from './HomeStories/HomeStories';
 import About from './About/About';
 import Carousel from './Carousel/Carousel';
 import MetaData from '../../Components/Helmet/MetaData';
-
 import './Home.scss';
-import { Helmet } from 'react-helmet-async';
+import { welcomeLog } from '../../util/ultilities';
 
 function Home() {
   return (
@@ -21,5 +20,5 @@ function Home() {
     </>
   );
 }
-
+welcomeLog('Welcome to the ST-United 🥳(Happy hacking!)');
 export default Home;

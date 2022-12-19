@@ -41,48 +41,9 @@
         }
       }
       .service-blocks {
-        padding: 50px 0;
-        .module-item {
-          text-align: left;
-          box-shadow: none;
-          display: table;
-          @media (max-width: 767px) {
-            margin-bottom: 30px;
-          }
-          .block-icon {
-            font-size: 40px;
-            padding-right: 20px;
-            display: table-cell;
-            vertical-align: top;
-            min-width: 70px;
-
-            @media (max-width: 767px) {
-              min-width: 50px;
-            }
-            img {
-              height: auto;
-              max-width: 100%;
-              border: 0;
-            }
-          }
-          .block-content {
-            h3 {
-              font-size: 20px;
-              line-height: 28px;
-              font-weight: 500;
-            }
-            p {
-              font-size: 18px;
-              line-height: 25px;
-              font-weight: 300;
-              margin-bottom: 10px;
-              color: #636363;
-              @media (max-width: 767px) {
-                font-size: 12px;
-                line-height: 23px;
-              }
-            }
-          }
+        padding: 55px 0;
+        @media (max-width: 767px) {
+          padding: 35px 0;
         }
       }
     }
@@ -139,6 +100,6 @@
 
 @include responsive('extra-small') {
   .wpb_wrapper_text.top {
-    padding: 0;
+    padding: 0 !important;
   }
 }

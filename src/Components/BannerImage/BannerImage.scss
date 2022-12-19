@@ -7,7 +7,7 @@
   background-position: center !important;
   background-size: cover !important;
   @media (max-width: 800px) {
-    height: 450px;
+    height: 400px;
   }
   &:before {
     content: '';
@@ -17,7 +17,7 @@
     height: 400px;
     position: absolute;
     @media (max-width: 800px) {
-      height: 450px;
+      height: 400px;
     }
   }
   .banner-caption {
@@ -27,11 +27,16 @@
     color: #fff;
     transform: translate(-50%, -50%);
     left: 50%;
-    text-align: center;
     top: 50%;
+    text-align: center;
     width: 100%;
-
-    h1 {
+    @media (min-width: 1000px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 765px) {
+      margin-top: 4px;
+    }
+    .heading1-cap {
       color: white;
       font-size: 43px;
       line-height: 43px;
@@ -42,13 +47,13 @@
         line-height: 36px;
         margin: 0 0 10px;
       }
-      @media (max-width: 700px) {
+      @media (max-width: 765px) {
         font-size: 24px;
         line-height: 28px;
         margin: 0 0 5px;
       }
     }
-    h2 {
+    .heading2-cap {
       font-size: 20px;
       line-height: 24px;
       font-weight: 500;

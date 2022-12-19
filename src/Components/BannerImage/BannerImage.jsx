@@ -32,8 +32,8 @@ const BannerImage = ({ backgroundUrl, captions }) => {
       }}
     >
       <div className='banner-caption'>
-        <h1>{captions[0]}</h1>
-        <h2>{captions[1]}</h2>
+        <h1 className='heading1-cap'>{captions[0]}</h1>
+        <h2 className='heading2-cap'>{captions[1]}</h2>
       </div>
     </div>
   );
