@@ -2,9 +2,9 @@ import React from 'react';
 import './CompanyDescription.scss';
 const CompanyDescription = () => {
   return (
-    <div>
+    <div className='container_company'>
       <div className='company-description'>
-        <div className='wpb_wrapper'>
+        <div className='wpb_wrapper_company_descriptions'>
           <p>
             Established on the early of 2016 and known as STD Software serves diverse global clients
             (Japanese, Australian, US) by offering mainstream services: IT outsourcing, software
@@ -32,13 +32,15 @@ const CompanyDescription = () => {
           </ul>
         </div>
         <span className='vc_sep_line'></span>
-        <div className='wpb_wrapper'>
-          <h1 style={{ textAlign: 'center' }}>WE ARE ST UNITED</h1>
+        <div className='wpb_wrapper_company_descriptions_st'>
+          <h3 className='title_h3' style={{ textAlign: 'center' }}>
+            WE ARE ST UNITED
+          </h3>
         </div>
         <div className='row wpb_row vc_inner vc_row-fluid'>
           <div className='wpb_column vc_column_container col-sm-6'>
             <div className='vc_column-inner'>
-              <div className='wpb_wrapper'>
+              <div className='wpb_wrapper_company_descriptions_content_a'>
                 <p style={{ textAlign: 'left' }}>
                   <b>Passion to Excel</b>
                 </p>
@@ -72,7 +74,7 @@ const CompanyDescription = () => {
           </div>
           <div className='wpb_column vc_column_container col-sm-6'>
             <div className='vc_column-inner'>
-              <div className='wpb_wrapper'>
+              <div className='wpb_wrapper_company_descriptions_content_b'>
                 <p>
                   <b>Customer satisfaction&nbsp;</b>
                 </p>
@@ -106,8 +108,10 @@ const CompanyDescription = () => {
           <span className='vc_empty_space_inner' />
         </div>
         <div className='wpb_text_column wpb_content_element '>
-          <div className='wpb_wrapper'>
-            <h4 style={{ textAlign: 'center' }}>…and many other cool stories..</h4>
+          <div className='wpb_wrapper_company_descriptions_end'>
+            <h6 className='title_h6' style={{ textAlign: 'center', marginBottom: '0px' }}>
+              …and many other cool stories..
+            </h6>
           </div>
         </div>
       </div>
