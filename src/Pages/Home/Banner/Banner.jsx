@@ -34,20 +34,17 @@ function Banner() {
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-2'></div>
-          <img
-            src='https://stunited.vn/wp-content/uploads/2019/09/01.1-Mobile-Trang-Chu-Version-01.png'
-            alt='Project slide'
-          />
+          <img src='/img/banner2.png' alt='Project' />
           <h2>We code, we care</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-3'></div>
-          <img src='/img/banner2.png' alt='digital marketing' />
+          <img src='/img/banner3.jpg' alt='Digital marketing' />
           <h2>We also do digital marketing</h2>
         </SwiperSlide>
         <SwiperSlide>
           <div className='bg slide-4'></div>
-          <img src='/img/banner3.jpg' alt='member' />
+          <img src='/img/banner4.jpg' alt='Member' />
           <h2>And we are incubating startup projects too...</h2>
         </SwiperSlide>
       </Swiper>
