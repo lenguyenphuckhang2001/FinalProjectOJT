@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-@import '../../../CommonScss/Responsive.scss';
+@import '../../../src/CommonScss/Responsive.scss';
 
 .background-blue {
   background: #00aeef;
@@ -17,7 +17,7 @@
   color: white;
 }
 //Header large screen
-header {
+.header-error {
   font-family: 'Roboto', sans-serif;
   background: transparent;
   position: absolute;
@@ -29,56 +29,60 @@ header {
     width: 100%;
     display: flex;
   }
-}
-.header-content {
-  .header-logo {
-    line-height: 90px;
-    float: left;
+  .container-bg {
+    background: white;
   }
-  .header-nav {
-    margin-left: 5%;
-    ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        &:hover {
+}
+.header-error {
+  .header-content {
+    .header-logo {
+      line-height: 90px;
+      float: left;
+    }
+    .header-nav {
+      margin-left: 5%;
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          &:hover {
+            a {
+              color: #00aeef;
+            }
+          }
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          text-transform: uppercase;
+          text-align: left;
+          overflow: hidden;
+          float: left;
+          position: relative;
           a {
-            color: #00aeef;
+            transition: 0.3s;
+            display: inline-block;
+            color: #004274;
+            text-decoration: none;
+            line-height: 90px;
+            padding: 0 15px;
           }
         }
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 18px;
-        text-transform: uppercase;
-        text-align: left;
-        overflow: hidden;
-        float: left;
-        position: relative;
-        a {
-          transition: 0.3s;
-          display: inline-block;
-          color: #ffffff;
-          //color: white;
-          text-decoration: none;
-          line-height: 90px;
-          padding: 0 15px;
-        }
-      }
-      li:nth-child(2) {
-        a {
-          &::after {
-            font-family: FontAwesome;
-            margin: 0 0 0 10px;
-            content: '\f0d7';
+        li:nth-child(2) {
+          a {
+            &::after {
+              font-family: FontAwesome;
+              margin: 0 0 0 10px;
+              content: '\f0d7';
+            }
           }
         }
       }
     }
   }
 }
-header {
+.header-error {
   .header-content {
     #mainNav {
       li:nth-child(2) {
@@ -128,7 +132,7 @@ header {
 }
 
 //Header mobi
-header {
+.header-error {
   .container-fluid {
     opacity: 0;
     visibility: hidden;
@@ -235,7 +239,7 @@ header {
 }
 
 @include responsive('large') {
-  header {
+  .header-error {
     position: relative;
     display: block;
     background: #00aeef;

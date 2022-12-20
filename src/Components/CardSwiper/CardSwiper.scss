@@ -1,4 +1,4 @@
-@import '../../Common\ scss/Responsive.scss';
+@import '../../CommonScss/Responsive.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 .card-swiper-inner {
   box-sizing: border-box;
@@ -169,7 +169,6 @@
   }
 }
 @include responsive('medium') {
-  
   .card-swiper-inner {
     .card-swiper {
       .card-swiper-overlay-1 {
