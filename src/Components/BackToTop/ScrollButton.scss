@@ -1,0 +1,31 @@
+.scrollToTopOn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #00aeef !important;
+  border-radius: 5px;
+  color: aliceblue !important;
+  font-weight: 700 !important;
+  animation: fadeIn 1.5s;
+  cursor: pointer;
+  z-index: 999;
+  i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+.scrollToTopOff:hover {
+  background-color: rgba(0, 176, 240%, 0.7) !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

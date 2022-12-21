@@ -1,0 +1,100 @@
+@import '../../../CommonScss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+.home-stories {
+  background-color: rgb(245, 245, 245);
+  font-family: 'Roboto', sans-serif;
+  .container {
+    .stories-body {
+      padding: 0 32px;
+    }
+  }
+  .stories-header {
+    padding: 55px 0 0 0;
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0 0 10px 0;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      margin: 0 0 10px;
+    }
+  }
+  .stories-space {
+    height: 32px;
+  }
+  .stories-body {
+    padding: 0 15px;
+  }
+}
+
+@include responsive('extra-large') {
+  .home-stories {
+    .container {
+      max-width: 1200px;
+      padding-left: 0;
+      padding-right: 0;
+      .stories-header {
+        h3 {
+          margin: 0 0 20px;
+        }
+      }
+      .stories-body {
+        padding: 0;
+      }
+    }
+  }
+}
+@include responsive('medium') {
+  .home-stories {
+    .stories-header {
+    }
+    .container {
+      .stories-body {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+@include responsive('small') {
+  .home-stories {
+    .container {
+      .stories-header {
+        padding: 35px 30px 0 30px;
+        h3 {
+          padding: 0 40px;
+          margin: 0 0 10px;
+        }
+      }
+      .stories-body {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+
+@include responsive('extra-small') {
+  .home-stories {
+    .container {
+      .stories-header {
+        padding-left: 0;
+        padding-right: 0;
+        h3 {
+          padding: 0 20px;
+          margin: 0 0 10px;
+        }
+      }
+      .stories-body {
+        padding: 0 15px;
+      }
+    }
+    .card-swiper-inner {
+      padding: 0;
+    }
+  }
+}

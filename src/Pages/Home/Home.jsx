@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import exampleApi from '../../Api/exampleApi';
+import Banner from './Banner/Banner';
+import HomeStories from './HomeStories/HomeStories';
+import About from './About/About';
+import Carousel from './Carousel/Carousel';
+import MetaData from '../../Components/Helmet/MetaData';
+import { welcomeLog } from '../../util/ultilities';
 
-function Home(props) {
-  const [state, setState] = useState();
+function Home() {
+  return (
+    <>
+      <MetaData
+        title='ST United – United to grow up'
+        description='Welcome to ST United, we collaborate to kick-start your software project'
+      />
+      <Banner />
 
-  useEffect(() => {
-    const testApi = async () => {
-      const data = await exampleApi.example();
-      setState(data);
-    };
-    testApi();
-  }, []);
-
-  console.log(state);
-  return <div>HOME page</div>;
+      <HomeStories />
+      <About />
+      <Carousel />
+    </>
+  );
 }
-
+welcomeLog('Welcome to the ST-United 🥳(Happy hacking!)');
 export default Home;

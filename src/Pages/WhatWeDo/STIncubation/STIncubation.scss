@@ -1,0 +1,105 @@
+@import '../../../CommonScss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.incubation-container {
+  background: #f5f5f5;
+  .container-wrapper {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    .incuba-title {
+      h1 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 30px;
+        padding: 30px 0px;
+        margin: 0;
+        @media (max-width: 890px) {
+          font-size: 22px;
+          line-height: 28px;
+          padding: 20px 0;
+        }
+        @media (max-width: 767px) {
+          font-size: 20px;
+          line-height: 28px;
+          padding: 15px 15px;
+        }
+      }
+    }
+    .incuba-content {
+      .wpb_wrapper_text {
+        article {
+          p {
+            margin-bottom: 20px;
+            strong {
+              font-weight: 700;
+            }
+            @media (max-width: 767px) {
+              font-size: 12px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+      .service-blocks {
+        padding: 55px 0;
+        @media (max-width: 767px) {
+          padding: 35px 0;
+        }
+      }
+    }
+  }
+}
+.pad {
+  padding-top: 40px;
+  background: #f5f5f5;
+  @media (max-width: 767px) {
+    padding-top: 70px;
+  }
+}
+.wpb_wrapper_bottom {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  @media (max-width: 767px) {
+    padding-top: 65px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 100px;
+  }
+
+  .wpb-bottom-title {
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.wpb_wrapper_text.top {
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+}
+
+@include responsive('extra-small') {
+  .wpb_wrapper_text.top {
+    padding: 0 !important;
+  }
+}

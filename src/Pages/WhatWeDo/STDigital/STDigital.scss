@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+@import '../../../CommonScss/Responsive';
+.digital-wrapper {
+  background: white;
+}
+.title-digital {
+  h1 {
+    font: 30px 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 30px 0;
+    line-height: 38px;
+  }
+}
+.content {
+  font: 16px 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  .sub-content {
+    font-weight: 500;
+  }
+}
+
+.our-team {
+  margin: 0px;
+  .item-img {
+    width: 100%;
+  }
+  .name_item {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 4px;
+  }
+  .position_item {
+    margin-bottom: 40px;
+  }
+}
+
+.team {
+  margin-bottom: 42px;
+  padding-top: 60px;
+  font: 18px 'Roboto', sans-serif;
+  font-weight: 500;
+}
+@include responsive('extra-large') {
+  .title-digital {
+    p {
+      font-size: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 20px;
+      letter-spacing: 0.5px;
+      line-height: 0.6cm;
+    }
+    h1 {
+      font-size: 30px;
+      padding: 0;
+      padding-top: 30px;
+    }
+  }
+
+  .name_item {
+    text-align: center;
+  }
+  .position_item {
+    text-align: center;
+  }
+}
+@include responsive('large') {
+  .title-digital {
+    p {
+      font-size: 16px;
+      padding: 0;
+      padding-top: 20px;
+      letter-spacing: 0.5px;
+      line-height: 0.6cm;
+    }
+    h1 {
+      font-size: 30px;
+      padding: 0;
+      padding-top: 30px;
+    }
+  }
+  .name_item {
+    text-align: center;
+  }
+  .position_item {
+    text-align: center;
+  }
+}
+@include responsive('medium') {
+  .digital-wrapper {
+    .container {
+      max-width: 730px;
+    }
+  }
+  .title-digital {
+    p {
+      font-size: 16px;
+      padding-top: 20px;
+      letter-spacing: 0.5px;
+      line-height: 0.6cm;
+    }
+    h1 {
+      font-size: 22px;
+      padding-top: 30px;
+    }
+  }
+  .our-team {
+    .item-img {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+  .name_item {
+    text-align: center;
+  }
+  .position_item {
+    text-align: center;
+  }
+}
+@include responsive('small') {
+  .title-digital {
+    p {
+      font-size: 12px;
+
+      padding-left: 55px;
+      padding-top: 0px;
+      letter-spacing: 0.5px;
+      line-height: 0.6cm;
+    }
+    h1 {
+      font-size: 20px;
+      padding-left: 55px;
+      padding-top: 10px;
+    }
+  }
+  .about-digital {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .our-team {
+    margin: 0px;
+  }
+
+  .name_item {
+    text-align: center;
+  }
+  .position_item {
+    text-align: center;
+  }
+}
+@include responsive('extra-small') {
+  .title-digital {
+    p {
+      font-size: 12px;
+      padding-left: 10px;
+      letter-spacing: 0.5px;
+      line-height: 0.6cm;
+    }
+    h1 {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+@import '../../../CommonScss/Responsive.scss';
+footer {
+  font-family: 'Roboto', sans-serif;
+  li {
+    list-style: none;
+  }
+}
+
+footer {
+  .footer-top {
+    color: white;
+    background: #181818;
+  }
+  .footer-bottom {
+    background: #000;
+    border-top: 1px solid #00243f;
+    padding: 30px 0 25px;
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.footer-top {
+  margin-bottom: -30px;
+  padding: 100px 0 70px;
+  .footer-widget {
+    margin-bottom: 30px;
+  }
+  .widget-top {
+    margin-bottom: 17px;
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+  }
+}
+
+.footer-top {
+  .widget-menu-body {
+    ul {
+      columns: 2;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      li {
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 0 10px 0;
+        padding: 0 0 0 20px;
+        .sub-menu {
+          padding: 10px 0 0 5px;
+          columns: 1;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+        a {
+          margin-left: -10px;
+          padding-left: 10px;
+          text-decoration: none;
+          color: white;
+          margin-right: 5px;
+          text-transform: uppercase;
+          font-weight: 300;
+          transition: 0.3s;
+          &:before {
+            margin-right: 10px;
+            font-family: FontAwesome;
+            font-size: 12px;
+            line-height: 14px;
+            content: '\f0da';
+          }
+          &:hover {
+            color: rgb(1, 113, 153);
+          }
+        }
+      }
+    }
+  }
+  .widget-contact {
+    font-size: 14px;
+
+    ul {
+      padding: 0;
+      li {
+        font-weight: 300;
+        padding-left: 25px;
+        margin-bottom: 6px;
+        i {
+          margin-right: 10px;
+        }
+        a {
+          text-decoration: none;
+          transition: 0.3s;
+          color: white;
+          &:hover {
+            color: rgb(1, 113, 153);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-widget {
+  iframe {
+    border: none;
+    visibility: visible;
+    width: fit-content;
+    height: 130px;
+    width: 100%;
+  }
+}
+@include responsive('medium') {
+  footer {
+    padding: 0;
+    .footer-bottom {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

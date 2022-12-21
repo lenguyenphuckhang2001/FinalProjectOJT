@@ -1,0 +1,58 @@
+@import '../../../CommonScss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+.listTeam {
+  background-color: #f5f5f5;
+  text-align: center;
+  .t-title {
+    font-weight: 300;
+    line-height: 240px;
+    padding: 40px 0px 0px;
+  }
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px !important;
+    line-height: 28px;
+    margin-bottom: 80px;
+    font-weight: 500;
+  }
+}
+
+.table-member {
+  padding: 0 125px;
+  padding-bottom: 55px;
+}
+
+@include responsive('extra-large') {
+  .table-member {
+    padding: 0 50px;
+    padding-bottom: 55px;
+  }
+}
+
+@include responsive('large') {
+  .table-member {
+    padding: 0 10px;
+    padding-bottom: 55px;
+  }
+}
+
+@include responsive('medium') {
+  .table-member {
+    padding: 0 20px;
+    padding-bottom: 55px;
+  }
+}
+@include responsive('small') {
+  .table-member {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 55px;
+  }
+}
+@include responsive('extra-small') {
+  .table-member {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 55px;
+  }
+}

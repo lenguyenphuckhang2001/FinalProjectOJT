@@ -1,0 +1,212 @@
+@import '../../CommonScss/Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+.card-swiper-inner {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  .card-swiper {
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .card-swiper-overlay-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+      transform: translate3d(0, 0, 0);
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.2) 55%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      .card-swiper-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-height: 100%;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: white;
+        width: 100%;
+        a {
+          &:nth-child(1) {
+            margin-right: 6px;
+          }
+          transition: 0.3s;
+          &:hover {
+            color: #00aeff;
+            i {
+              color: #00aeff;
+            }
+          }
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 700;
+          color: white;
+          i {
+            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+          }
+        }
+        p {
+          font-weight: 900;
+          margin-bottom: 8px;
+        }
+        span {
+          font-size: 14px;
+          line-height: 18px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .card-swiper-overlay-2 {
+      transform: translate3d(100%, 0, 0);
+      background: rgba(255, 255, 255, 0.9);
+      transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: black;
+      .swiper-overlay-2-inner {
+        top: 50%;
+        position: absolute;
+        transform: translate(0, -50%);
+        overflow: auto;
+        width: 100%;
+        max-height: 100%;
+        padding: 15px 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+.swiper-overlay-2-inner {
+  h4 {
+    a {
+      font-size: 16px;
+      color: black;
+      font-weight: 700;
+    }
+  }
+  p {
+    font-weight: 700;
+    a {
+      font-size: 14px;
+      color: black;
+      margin-bottom: 12px;
+    }
+  }
+  .swiper-overlay-2-description {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+    margin: 15px 0 20px;
+  }
+  .card-swiper-icon {
+    margin: 0;
+    padding: 0;
+    i:nth-child(1) {
+      margin-right: 6px;
+    }
+  }
+  a {
+    &:hover {
+      color: #00aeff;
+    }
+  }
+  a {
+    transition: all 0.3s;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+.card-swiper {
+  &:hover {
+    .card-swiper-overlay-2 {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+@include responsive('extra-large') {
+  .card-swiper-inner {
+    .card-swiper {
+      .card-swiper-overlay-1 {
+        .card-swiper-text {
+          p {
+            margin-bottom: 2px;
+          }
+        }
+        .card-swiper-icon {
+          margin-top: 10px;
+
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive('large') {
+  .card-swiper-inner {
+    padding: 0 15px;
+  }
+}
+@include responsive('medium') {
+  .card-swiper-inner {
+    .card-swiper {
+      .card-swiper-overlay-1 {
+        .card-swiper-text {
+          p {
+            margin-bottom: 0;
+            font-size: 14px;
+          }
+          span {
+            font-size: 14px;
+          }
+          .card-swiper-icon {
+            margin-top: 12px;
+            i {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .card-swiper-overlay-2 {
+        display: none;
+        opacity: none;
+      }
+    }
+  }
+}
+@include responsive('extra-large') {
+  .card-swiper-inner {
+    .card-swiper-inner {
+      .card-swiper {
+        .card-swiper-overlay-1 {
+          .card-swiper-text {
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

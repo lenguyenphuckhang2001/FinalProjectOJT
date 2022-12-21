@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+.button {
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  margin-right: 20px;
+  a {
+    padding: 0px 20px;
+    text-decoration: none;
+    &:hover {
+      background-color: #e7ae59;
+    }
+  }
+}
+.button-portfilio {
+  border-radius: 5px;
+  border-color: #f7be68;
+  background-color: #f7be68;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: none;
+  margin-left: -30px;
+  margin-bottom: 40px;
+  //margin-top: 107px;
+  p {
+    line-height: 20px;
+    color: #fff;
+    margin-top: 12px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+  }
+}
